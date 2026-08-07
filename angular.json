@@ -1,0 +1,60 @@
+{
+  "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "version": 1,
+  "cli": {
+    "packageManager": "pnpm",
+    "schematicCollections": ["angular-eslint"]
+  },
+  "newProjectRoot": "projects",
+  "projects": {
+    "vellum-lib": {
+      "projectType": "library",
+      "root": "projects/vellum-lib",
+      "sourceRoot": "projects/vellum-lib/src",
+      "prefix": "vlm",
+      "architect": {
+        "build": {
+          "builder": "@angular/build:ng-packagr",
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/vellum-lib/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/vellum-lib/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular/build:unit-test",
+          "options": {
+            "tsConfig": "projects/vellum-lib/tsconfig.spec.json"
+          }
+        },
+        "lint": {
+          "builder": "@angular-eslint/builder:lint",
+          "options": {
+            "lintFilePatterns": ["projects/vellum-lib/**/*.ts", "projects/vellum-lib/**/*.html"],
+            "eslintConfig": "projects/vellum-lib/eslint.config.js"
+          }
+        },
+        "storybook": {
+          "builder": "@storybook/angular-vite:start-storybook",
+          "options": {
+            "configDir": "projects/vellum-lib/.storybook",
+            "browserTarget": "vellum-lib:build",
+            "port": 6006
+          }
+        },
+        "build-storybook": {
+          "builder": "@storybook/angular-vite:build-storybook",
+          "options": {
+            "configDir": "projects/vellum-lib/.storybook",
+            "browserTarget": "vellum-lib:build",
+            "outputDir": "storybook-static"
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,5 @@
+@use './colors.tokens' as colors-tokens;
+
+[data-theme='light'] {
+  @include colors-tokens.vlm-color-tokens;
+}

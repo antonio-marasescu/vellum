@@ -1,0 +1,45 @@
+@mixin vlm-color-tokens-dark {
+  --vlm-color-primary: oklch(0.7686 0.1647 70.0804);
+  --vlm-color-primary-hover: oklch(0.8369 0.1644 84.4286);
+  --vlm-color-primary-foreground: oklch(0 0 0);
+
+  --vlm-color-primary-1: oklch(0.8369 0.1644 84.4286);
+  --vlm-color-primary-2: oklch(0.6658 0.1574 58.3183);
+  --vlm-color-primary-3: oklch(0.4732 0.1247 46.2007);
+  --vlm-color-primary-4: oklch(0.5553 0.1455 48.9975);
+  --vlm-color-primary-5: oklch(0.4732 0.1247 46.2007);
+
+  --vlm-color-secondary: oklch(0.2686 0 0);
+
+  --vlm-color-error: oklch(0.6368 0.2078 25.3313);
+  --vlm-color-error-hover: oklch(0.7 0.2078 25.3313);
+  --vlm-color-error-foreground: oklch(1 0 0);
+
+  --vlm-color-warning: oklch(0.75 0.17 45);
+  --vlm-color-warning-hover: oklch(0.82 0.16 50);
+  --vlm-color-warning-foreground: oklch(0 0 0);
+
+  --vlm-color-success: oklch(0.72 0.17 145);
+  --vlm-color-success-hover: oklch(0.8 0.16 150);
+  --vlm-color-success-foreground: oklch(0 0 0);
+
+  --vlm-color-info: oklch(0.72 0.15 235);
+  --vlm-color-info-hover: oklch(0.8 0.14 235);
+  --vlm-color-info-foreground: oklch(0 0 0);
+
+  --vlm-color-bg: oklch(0.2046 0 0);
+  --vlm-color-bg-surface: oklch(0.2686 0 0);
+  --vlm-color-bg-surface-hover: oklch(0.3715 0 0);
+
+  --vlm-color-text: oklch(0.9219 0 0);
+  --vlm-color-text-muted: oklch(0.7155 0 0);
+
+  --vlm-color-border: oklch(0.3715 0 0);
+
+  --vlm-color-outline: oklch(0.9219 0 0);
+  --vlm-color-outline-border: oklch(0.3715 0 0);
+}
+
+[data-theme='dark'] {
+  @include vlm-color-tokens-dark;
+}

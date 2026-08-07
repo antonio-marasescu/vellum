@@ -1,0 +1,51 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(pnpm run lint)",
+      "Bash(pnpm run build)",
+      "Bash(pnpm run format)",
+      "Bash(pnpm run format:check)",
+      "Bash(pnpm run storybook)",
+      "Bash(pnpm run build-storybook)",
+      "Bash(pnpm run test)",
+      "WebFetch(domain:angular.dev)"
+    ],
+    "deny": [
+      "Bash(git push)",
+      "Bash(git push *)",
+      "Bash(git commit)",
+      "Bash(git commit *)",
+      "Bash(npm publish)",
+      "Bash(npm publish *)",
+      "Bash(pnpm publish)",
+      "Bash(pnpm publish *)"
+    ]
+  },
+  "hooks": {
+    "PostToolUse": [
+      {
+        "matcher": "Edit|Write|MultiEdit",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "pnpm run format >/dev/null 2>&1; pnpm run lint 2>&1 | tail -n 40",
+            "timeout": 90,
+            "statusMessage": "Running lint and format..."
+          }
+        ]
+      }
+    ],
+    "PreToolUse": [
+      {
+        "matcher": "Bash",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node .claude/hooks/block-dangerous-bash.js",
+            "timeout": 10
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,4 @@
+dist
+storybook-static
+.angular
+pnpm-lock.yaml
