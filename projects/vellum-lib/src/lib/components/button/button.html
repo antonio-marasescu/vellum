@@ -1,0 +1,27 @@
+<button
+  type="button"
+  class="vlm-button"
+  [attr.id]="id()"
+  [disabled]="disabled()"
+  [attr.aria-label]="variant() === 'fab' ? label() : null"
+  [class.vlm-button--basic]="variant() === 'basic'"
+  [class.vlm-button--text]="variant() === 'text'"
+  [class.vlm-button--outlined]="variant() === 'outlined'"
+  [class.vlm-button--fab]="variant() === 'fab'"
+  [class.vlm-button--primary]="theme() === 'primary'"
+  [class.vlm-button--secondary]="theme() === 'secondary'"
+  [class.vlm-button--icon]="useIcon()"
+  [class.vlm-button--xs]="size() === 'xs'"
+  [class.vlm-button--sm]="size() === 'sm'"
+  [class.vlm-button--md]="size() === 'md'"
+  [class.vlm-button--lg]="size() === 'lg'"
+  [class.vlm-button--xl]="size() === 'xl'"
+  [class.vlm-button--xxl]="size() === 'xxl'"
+  (click)="onClick()"
+>
+  <ng-content select="[preIcon]"></ng-content>
+  @if (label() && variant() !== 'fab') {
+    <span class="vlm-button__label">{{ label() }}</span>
+  }
+  <ng-content select="[postIcon]"></ng-content>
+</button>

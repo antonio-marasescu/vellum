@@ -1,9 +1,5 @@
 import type { Preview } from '@storybook/angular-vite';
-import { setCompodocJson } from '@storybook/addon-docs/angular';
-import docJson from '../documentation.json';
 import '../src/styles/index.scss';
-
-setCompodocJson(docJson);
 
 const preview: Preview = {
   decorators: [

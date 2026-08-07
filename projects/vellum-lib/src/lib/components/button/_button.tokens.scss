@@ -1,0 +1,55 @@
+@mixin vlm-button-tokens {
+  --vlm-button-radius: 6px;
+  --vlm-button-radius-fab: 50%;
+  --vlm-button-font-weight: 600;
+  --vlm-button-transition-duration: 150ms;
+  --vlm-button-disabled-opacity: 0.5;
+
+  --vlm-button-size-xs-padding-block: 4px;
+  --vlm-button-size-xs-padding-inline: 10px;
+  --vlm-button-size-xs-font-size: 12px;
+  --vlm-button-size-xs-gap: 4px;
+  --vlm-button-size-xs-fab-diameter: 28px;
+
+  --vlm-button-size-sm-padding-block: 6px;
+  --vlm-button-size-sm-padding-inline: 12px;
+  --vlm-button-size-sm-font-size: 13px;
+  --vlm-button-size-sm-gap: 6px;
+  --vlm-button-size-sm-fab-diameter: 32px;
+
+  --vlm-button-size-md-padding-block: 8px;
+  --vlm-button-size-md-padding-inline: 16px;
+  --vlm-button-size-md-font-size: 14px;
+  --vlm-button-size-md-gap: 8px;
+  --vlm-button-size-md-fab-diameter: 40px;
+
+  --vlm-button-size-lg-padding-block: 10px;
+  --vlm-button-size-lg-padding-inline: 20px;
+  --vlm-button-size-lg-font-size: 16px;
+  --vlm-button-size-lg-gap: 8px;
+  --vlm-button-size-lg-fab-diameter: 48px;
+
+  --vlm-button-size-xl-padding-block: 12px;
+  --vlm-button-size-xl-padding-inline: 24px;
+  --vlm-button-size-xl-font-size: 18px;
+  --vlm-button-size-xl-gap: 10px;
+  --vlm-button-size-xl-fab-diameter: 56px;
+
+  --vlm-button-size-xxl-padding-block: 14px;
+  --vlm-button-size-xxl-padding-inline: 28px;
+  --vlm-button-size-xxl-font-size: 20px;
+  --vlm-button-size-xxl-gap: 12px;
+  --vlm-button-size-xxl-fab-diameter: 64px;
+
+  --vlm-button-primary-bg: var(--vlm-color-primary);
+  --vlm-button-primary-bg-hover: var(--vlm-color-primary-hover);
+  --vlm-button-primary-fg: var(--vlm-color-primary-foreground);
+  --vlm-button-primary-color: var(--vlm-color-primary-text);
+
+  --vlm-button-secondary-bg: var(--vlm-color-secondary);
+  --vlm-button-secondary-bg-hover: var(--vlm-color-secondary-hover);
+  --vlm-button-secondary-fg: var(--vlm-color-secondary-foreground);
+  --vlm-button-secondary-color: var(--vlm-color-secondary-text);
+
+  --vlm-button-neutral-bg-hover: var(--vlm-color-bg-surface-hover);
+}

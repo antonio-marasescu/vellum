@@ -1,0 +1,46 @@
+import { Canvas, Controls, Meta, Primary, Stories } from '@storybook/addon-docs/blocks';
+import * as ButtonStories from './button.stories';
+
+<Meta of={ButtonStories} />
+
+# Button
+
+A standalone, unstyled-by-default `vlm-button`. Visual values come from the
+`--vlm-button-*` CSS custom properties in `_button.tokens.scss`; theme and size
+are chosen via inputs.
+
+<Primary />
+
+## Props
+
+<Controls />
+
+## Variants
+
+`basic`, `text`, and `outlined`, in both themes.
+
+<Canvas of={ButtonStories.Variants} />
+
+## Sizes
+
+`xs` through `xxl`.
+
+<Canvas of={ButtonStories.Sizes} />
+
+## Icons
+
+Pass icon content via the `preIcon` / `postIcon` attribute slots and set `useIcon`
+for icon/label spacing.
+
+<Canvas of={ButtonStories.WithIcon} />
+
+## Fab
+
+A round, icon-only button. The `label` is still required for accessibility — it's
+rendered as the button's `aria-label` instead of visible text.
+
+<Canvas of={ButtonStories.Fab} />
+
+## All stories
+
+<Stories />

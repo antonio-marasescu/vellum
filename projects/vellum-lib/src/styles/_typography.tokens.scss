@@ -1,0 +1,27 @@
+@mixin vlm-typography-tokens {
+  --vlm-font-family-sans:
+    'Geist Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial,
+    sans-serif;
+  --vlm-font-family-mono:
+    ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace;
+
+  --vlm-font-size-xs: 12px;
+  --vlm-font-size-sm: 13px;
+  --vlm-font-size-md: 14px;
+  --vlm-font-size-lg: 16px;
+  --vlm-font-size-xl: 18px;
+  --vlm-font-size-xxl: 20px;
+
+  --vlm-font-weight-regular: 400;
+  --vlm-font-weight-medium: 500;
+  --vlm-font-weight-semibold: 600;
+  --vlm-font-weight-bold: 700;
+
+  --vlm-line-height-tight: 1.2;
+  --vlm-line-height-normal: 1.5;
+  --vlm-line-height-relaxed: 1.75;
+}
+
+:root {
+  @include vlm-typography-tokens;
+}

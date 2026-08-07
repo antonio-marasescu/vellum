@@ -60,4 +60,4 @@ Thumbs.db
 
 # LLM
 .claude/settings.local.json
-./specs
+specs
