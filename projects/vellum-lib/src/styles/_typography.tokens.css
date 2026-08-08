@@ -1,4 +1,4 @@
-@mixin vlm-typography-tokens {
+:root {
   --vlm-font-family-sans:
     'Geist Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial,
     sans-serif;
@@ -20,8 +20,4 @@
   --vlm-line-height-tight: 1.2;
   --vlm-line-height-normal: 1.5;
   --vlm-line-height-relaxed: 1.75;
-}
-
-:root {
-  @include vlm-typography-tokens;
 }

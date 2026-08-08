@@ -1,3 +1,4 @@
+import tailwindcss from '@tailwindcss/vite';
 import type { StorybookConfig } from '@storybook/angular-vite';
 
 const config: StorybookConfig = {
@@ -8,6 +9,11 @@ const config: StorybookConfig = {
     options: {
       compodoc: false
     }
+  },
+  async viteFinal(viteConfig) {
+    viteConfig.plugins ??= [];
+    viteConfig.plugins.push(tailwindcss());
+    return viteConfig;
   }
 };
 export default config;

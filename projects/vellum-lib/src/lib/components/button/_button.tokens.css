@@ -1,4 +1,4 @@
-@mixin vlm-button-tokens {
+:host {
   --vlm-button-radius: 6px;
   --vlm-button-radius-fab: 50%;
   --vlm-button-font-weight: 600;

@@ -3,4 +3,4 @@ declare module '*.md' {
   export default content;
 }
 
-declare module '*.scss';
+declare module '*.css';

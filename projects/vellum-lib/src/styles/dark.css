@@ -1,4 +1,4 @@
-@mixin vlm-color-tokens-dark {
+[data-theme='dark'] {
   --vlm-color-primary: oklch(0.7686 0.1647 70.0804);
   --vlm-color-primary-hover: oklch(0.8369 0.1644 84.4286);
   --vlm-color-primary-foreground: oklch(0.2 0 0);
@@ -46,8 +46,4 @@
 
   --vlm-color-outline: oklch(0.9219 0 0);
   --vlm-color-outline-border: oklch(0.3715 0 0);
-}
-
-[data-theme='dark'] {
-  @include vlm-color-tokens-dark;
 }

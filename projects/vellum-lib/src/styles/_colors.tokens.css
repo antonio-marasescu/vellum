@@ -1,4 +1,5 @@
-@mixin vlm-color-tokens {
+:root,
+[data-theme='light'] {
   --vlm-color-primary: oklch(0.7686 0.1647 70.0804);
   --vlm-color-primary-hover: oklch(0.6658 0.1574 58.3183);
   --vlm-color-primary-foreground: oklch(0.2 0 0);
@@ -46,8 +47,4 @@
 
   --vlm-color-outline: oklch(0.2686 0 0);
   --vlm-color-outline-border: oklch(0.9276 0.0058 264.5313);
-}
-
-:root {
-  @include vlm-color-tokens;
 }

@@ -7,7 +7,7 @@
 - label: string (optional)
 - size: xs | sm | md | lg | xl | xxl
 - disabled: boolean (default false)
-- theme: primary | accent (default primary)
+- theme: primary | secondary (default primary)
 - variant: basic | text | outlined (default basic) | fab (a round button) | fab-outlined
 - useIcon: boolean (actual icon is passed as ng-content via pre-icon or post-icon for positioning)
 - id: string (optional for aria)
@@ -26,7 +26,7 @@
 ## Inputs
 - label: string (optional)
 - size: xs | sm | md | lg | xl (default: md)
-- theme: primary | accent (default primary)
+- theme: primary | secondary (default primary)
 - variant: basic | outlined (default basic)
 - inputType: https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/input (the values from here)
 - required: boolean (to display an "*") (default false)
@@ -45,7 +45,7 @@
 
 - content: will be passed as ng-content
 - size: xs | sm | md | lg | xl | xxl (default: md)
-- theme: primary | accent (default primary)
+- theme: primary | secondary (default primary)
 - removable: boolean (will display an "x" to be removed if present)  (default false)
 - highlighted: boolean (forces the hover highlight) (default false)
 - disabled: boolean (default false)
@@ -78,7 +78,7 @@
 ## Inputs
 
 - size: xs | sm | md | lg | xl | xxl (default: md)
-- theme: primary | accent (default primary)
+- theme: primary | secondary (default primary)
 - id: string (optional for aria)
 - name: string (HTML's 'name' attribute used to group radios for unique selection.)
 - disabled: boolean (default false)
@@ -113,16 +113,29 @@
 
 - Similar to an expansion panel, using ng-content
 
-# Progress Spinner
+# Progress Spinner Component
 
 - [ ] Finished
 
 ## Inputs
 
 - mode: determinate | indeterminate (defaults to indeterminate)
-- theme: primary | accent (default primary)
+- theme: primary | secondary (default primary)
 - value: number (optional, only used if determinate)
 - diameter: number (The diameter of the progress spinner (will set width and height of svg)
 - strokeWidth (Stroke width of the progress spinner.)
 
-### Styling notes
+
+# Toast Component
+
+- [ ] Finished
+
+## Inputs
+
+- content: passed via ng-content
+- theme: primary | secondary (default primary)
+- variant: basic | outlined (default basic)
+- removable: boolean (will display an "x" to be removed if present)  (default false)
+- disabled: boolean (default false)
+- id: string (optional for aria)
+
