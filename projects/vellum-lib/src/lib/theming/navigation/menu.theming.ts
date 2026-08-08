@@ -42,6 +42,7 @@ export const SUBMENU_INDENT_CLASSES = 'pl-[var(--vlm-menu-item-submenu-indent)]'
 
 // Horizontal menus render their submenu as a floating panel anchored under the trigger
 // item, sized to its own content — an in-flow submenu would otherwise be squeezed to the
-// trigger row's width.
+// trigger row's width. Keeps the vlm-menu-item__submenu-wrapper identifier class so it's
+// still selectable/stylable the same way as the in-flow variant.
 export const SUBMENU_FLOATING_CLASSES =
-  'absolute top-full left-0 z-10 mt-[var(--vlm-menu-item-submenu-offset)] w-max min-w-[var(--vlm-menu-item-submenu-min-width)] rounded-[var(--vlm-menu-item-radius)] border border-[color:var(--vlm-menu-item-submenu-panel-border-color)] bg-[color:var(--vlm-menu-item-submenu-panel-bg)] shadow-[var(--vlm-menu-item-submenu-panel-shadow)]';
+  'vlm-menu-item__submenu-wrapper absolute top-full left-0 z-10 mt-[var(--vlm-menu-item-submenu-offset)] w-max min-w-[var(--vlm-menu-item-submenu-min-width)] rounded-[var(--vlm-menu-item-radius)] border border-[color:var(--vlm-menu-item-submenu-panel-border-color)] bg-[color:var(--vlm-menu-item-submenu-panel-bg)] shadow-[var(--vlm-menu-item-submenu-panel-shadow)]';
