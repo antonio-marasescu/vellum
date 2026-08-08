@@ -11,9 +11,9 @@ const theme = create({
   colorSecondary: '#f59e0b',
 
   appBg: '#171717',
-  appContentBg: '#262626',
+  appContentBg: '#171717',
   appPreviewBg: '#171717',
-  appBorderColor: '#404040',
+  appBorderColor: '#171717',
   appBorderRadius: 6,
 
   textColor: '#e5e5e5',
