@@ -1,0 +1,56 @@
+:host {
+  --vlm-button-toggle-radius: 6px;
+  --vlm-button-toggle-font-weight: 500;
+  --vlm-button-toggle-transition-duration: 150ms;
+  --vlm-button-toggle-disabled-opacity: 0.5;
+  --vlm-button-toggle-unselected-opacity: 0.65;
+
+  --vlm-button-toggle-unselected-bg: var(--vlm-color-bg-surface);
+  --vlm-button-toggle-unselected-bg-hover: var(--vlm-color-bg-surface-hover);
+  --vlm-button-toggle-unselected-color: var(--vlm-color-text);
+  --vlm-button-toggle-unselected-border-color: var(--vlm-color-border);
+
+  --vlm-button-toggle-primary-bg: var(--vlm-color-primary);
+  --vlm-button-toggle-primary-bg-hover: var(--vlm-color-primary-hover);
+  --vlm-button-toggle-primary-fg: var(--vlm-color-primary-foreground);
+
+  --vlm-button-toggle-secondary-bg: var(--vlm-color-secondary);
+  --vlm-button-toggle-secondary-bg-hover: var(--vlm-color-secondary-hover);
+  --vlm-button-toggle-secondary-fg: var(--vlm-color-secondary-foreground);
+
+  --vlm-button-toggle-info-bg: var(--vlm-color-info);
+  --vlm-button-toggle-info-bg-hover: var(--vlm-color-info-hover);
+  --vlm-button-toggle-info-fg: var(--vlm-color-info-foreground);
+
+  --vlm-button-toggle-success-bg: var(--vlm-color-success);
+  --vlm-button-toggle-success-bg-hover: var(--vlm-color-success-hover);
+  --vlm-button-toggle-success-fg: var(--vlm-color-success-foreground);
+
+  --vlm-button-toggle-warning-bg: var(--vlm-color-warning);
+  --vlm-button-toggle-warning-bg-hover: var(--vlm-color-warning-hover);
+  --vlm-button-toggle-warning-fg: var(--vlm-color-warning-foreground);
+
+  --vlm-button-toggle-size-xs-padding-block: 4px;
+  --vlm-button-toggle-size-xs-padding-inline: 10px;
+  --vlm-button-toggle-size-xs-font-size: 12px;
+
+  --vlm-button-toggle-size-sm-padding-block: 6px;
+  --vlm-button-toggle-size-sm-padding-inline: 12px;
+  --vlm-button-toggle-size-sm-font-size: 13px;
+
+  --vlm-button-toggle-size-md-padding-block: 8px;
+  --vlm-button-toggle-size-md-padding-inline: 16px;
+  --vlm-button-toggle-size-md-font-size: 14px;
+
+  --vlm-button-toggle-size-lg-padding-block: 10px;
+  --vlm-button-toggle-size-lg-padding-inline: 20px;
+  --vlm-button-toggle-size-lg-font-size: 16px;
+
+  --vlm-button-toggle-size-xl-padding-block: 12px;
+  --vlm-button-toggle-size-xl-padding-inline: 24px;
+  --vlm-button-toggle-size-xl-font-size: 18px;
+
+  --vlm-button-toggle-size-xxl-padding-block: 14px;
+  --vlm-button-toggle-size-xxl-padding-inline: 28px;
+  --vlm-button-toggle-size-xxl-font-size: 20px;
+}

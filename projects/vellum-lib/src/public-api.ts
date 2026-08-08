@@ -10,3 +10,7 @@ export * from './lib/types/input.types';
 
 export * from './lib/components/chip/chip';
 export * from './lib/types/chip.types';
+
+export * from './lib/components/button-toggle-group/button-toggle/button-toggle';
+export * from './lib/components/button-toggle-group/button-toggle-group';
+export * from './lib/types/button-toggle.types';

@@ -1,0 +1,45 @@
+import { Canvas, Controls, Meta, Primary, Stories } from '@storybook/addon-docs/blocks';
+import * as ButtonToggleGroupStories from './button-toggle-group.stories';
+
+<Meta of={ButtonToggleGroupStories} />
+
+# Button Toggle Group
+
+A standalone, unstyled-by-default `vlm-button-toggle-group` — a simplified equivalent of
+Angular Material's `mat-button-toggle-group` (no ARIA pattern for now, just ids). Wrap
+`vlm-button-toggle` children inside it; each toggle reads its `size`/`theme`/`disabled`
+and selection state from this group via dependency injection, so those props only need
+to be set once, on the group.
+
+<Primary />
+
+## Props
+
+<Controls />
+
+## Themes
+
+`primary`, `secondary`, `info`, `success`, and `warning`.
+
+<Canvas of={ButtonToggleGroupStories.Themes} />
+
+## Multiple selection
+
+Setting `multiple` allows more than one toggle to be selected at once. `value` (and the
+`selectionChange` output) are always a `string[]`, regardless of `multiple`. The output is
+named `selectionChange` rather than `change` — Angular ESLint's `no-output-native` rule
+forbids reusing native DOM event names for custom outputs.
+
+<Canvas of={ButtonToggleGroupStories.Multiple} />
+
+## Vertical
+
+<Canvas of={ButtonToggleGroupStories.Vertical} />
+
+## Disabled
+
+<Canvas of={ButtonToggleGroupStories.Disabled} />
+
+## All stories
+
+<Stories />
