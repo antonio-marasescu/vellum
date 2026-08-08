@@ -1,0 +1,32 @@
+<span
+  [attr.id]="id()"
+  [class]="toastClasses()"
+  role="status"
+  aria-live="polite"
+  [attr.aria-disabled]="disabled() ? true : null"
+>
+  <span class="vlm-toast__content">
+    <ng-content></ng-content>
+  </span>
+  @if (removable()) {
+    <button
+      type="button"
+      class="vlm-toast__remove inline-flex h-[var(--vlm-toast-remove-size)] w-[var(--vlm-toast-remove-size)] shrink-0 items-center justify-center rounded-full border-0 bg-transparent p-0 text-[color:inherit] outline-none hover:bg-[color:var(--vlm-toast-remove-hover-bg)] focus-visible:bg-[color:var(--vlm-toast-remove-hover-bg)] disabled:cursor-not-allowed"
+      [disabled]="disabled()"
+      aria-label="Remove"
+      (click)="onRemove()"
+    >
+      <svg
+        class="h-[var(--vlm-toast-remove-icon-size)] w-[var(--vlm-toast-remove-icon-size)]"
+        viewBox="0 0 16 16"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="1.5"
+        stroke-linecap="round"
+        aria-hidden="true"
+      >
+        <path d="M3 3L13 13M13 3L3 13" />
+      </svg>
+    </button>
+  }
+</span>

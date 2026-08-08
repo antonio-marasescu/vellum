@@ -1,0 +1,17 @@
+<span
+  [class]="avatarClasses()"
+  [attr.role]="clickable() ? 'button' : null"
+  [attr.tabindex]="clickable() ? 0 : null"
+  (click)="onClick()"
+  (keydown)="onKeydown($event)"
+>
+  @if (showImage()) {
+    <img
+      class="vlm-avatar__image h-full w-full object-cover"
+      [src]="url()"
+      [alt]="placeholder() ?? ''"
+    />
+  } @else {
+    <span class="vlm-avatar__placeholder">{{ placeholder() }}</span>
+  }
+</span>

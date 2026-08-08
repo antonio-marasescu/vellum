@@ -1,0 +1,51 @@
+import { Canvas, Controls, Meta } from '@storybook/addon-docs/blocks';
+import * as PanelStories from './panel.stories';
+
+<Meta of={PanelStories} />
+
+# Panel
+
+An expansion panel component that toggles content visibility. Similar to an accordion item, the panel displays a header that can be clicked to expand/collapse the body content.
+
+## Usage
+
+```html
+<vlm-panel [(expanded)]="isExpanded">
+  <span panelHeader>What is Vellum?</span>
+  A personal Angular component library.
+</vlm-panel>
+```
+
+## Props
+
+<Controls />
+
+## Examples
+
+### Default
+
+<Canvas of={PanelStories.Default} />
+
+### Expanded by Default
+
+<Canvas of={PanelStories.ExpandedByDefault} />
+
+### Themes
+
+<Canvas of={PanelStories.Themes} />
+
+### Disabled
+
+<Canvas of={PanelStories.Disabled} />
+
+## Content Projection
+
+- **panelHeader**: Header content projected via `[panelHeader]` attribute
+- **default**: Body content projected directly into the component
+
+## Accessibility
+
+- Uses `role="button"` on the header when not disabled
+- Provides `aria-expanded` to indicate expansion state
+- Supports keyboard interaction (Enter/Space) to toggle
+- Links header and body via `aria-controls` when an `id` is provided

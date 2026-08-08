@@ -1,0 +1,45 @@
+import { Canvas, Controls, Meta, Primary, Stories } from '@storybook/addon-docs/blocks';
+import * as ToastStories from './toast.stories';
+
+<Meta of={ToastStories} />
+
+# Toast
+
+A standalone, unstyled-by-default `vlm-toast`. Visual values come from the `--vlm-toast-*`
+CSS custom properties in `_toast.tokens.css`; theme and variant are chosen via inputs.
+Content is passed as `ng-content`. Renders with `role="status"` and `aria-live="polite"` so
+assistive technology announces it when it appears.
+
+Purely presentational — it does not manage its own visibility, positioning, or stacking.
+Consumers are responsible for mounting/removing it (e.g. from a list of active
+notifications) and reacting to the `removed` output.
+
+<Primary />
+
+## Props
+
+<Controls />
+
+## Themes
+
+`primary` (default), `secondary`, `info`, `success`, and `warning`.
+
+<Canvas of={ToastStories.Themes} />
+
+## Outlined
+
+<Canvas of={ToastStories.Outlined} />
+
+## Removable
+
+Setting `removable` renders an "x" that emits `removed` when pressed.
+
+<Canvas of={ToastStories.Removable} />
+
+## Disabled
+
+<Canvas of={ToastStories.Disabled} />
+
+## All stories
+
+<Stories />

@@ -1,0 +1,29 @@
+:host {
+  --vlm-avatar-radius: 8px;
+  --vlm-avatar-font-weight: 600;
+  --vlm-avatar-transition-duration: 150ms;
+
+  --vlm-avatar-bg: var(--vlm-color-secondary);
+  --vlm-avatar-fg: var(--vlm-color-secondary-foreground);
+
+  --vlm-avatar-clickable-ring-width: 2px;
+  --vlm-avatar-clickable-ring-color: var(--vlm-color-primary);
+
+  --vlm-avatar-size-xs-diameter: 20px;
+  --vlm-avatar-size-xs-font-size: 9px;
+
+  --vlm-avatar-size-sm-diameter: 28px;
+  --vlm-avatar-size-sm-font-size: 11px;
+
+  --vlm-avatar-size-md-diameter: 36px;
+  --vlm-avatar-size-md-font-size: 13px;
+
+  --vlm-avatar-size-lg-diameter: 44px;
+  --vlm-avatar-size-lg-font-size: 15px;
+
+  --vlm-avatar-size-xl-diameter: 56px;
+  --vlm-avatar-size-xl-font-size: 18px;
+
+  --vlm-avatar-size-xxl-diameter: 72px;
+  --vlm-avatar-size-xxl-font-size: 22px;
+}

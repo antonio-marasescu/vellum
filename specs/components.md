@@ -115,7 +115,7 @@
 
 # Panel Component 
 
-- [ ] Finished
+- [x] Finished
 
 - Similar to an expansion panel, using ng-content
 
@@ -134,7 +134,7 @@
 
 # Toast Component
 
-- [ ] Finished
+- [x] Finished
 
 ## Inputs
 
@@ -147,7 +147,7 @@
 
 # Avatar Component
 
-- [ ] Finished
+- [x] Finished
 
 ## Inputs
 

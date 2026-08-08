@@ -19,3 +19,12 @@ export * from './lib/components/divider/divider';
 
 export * from './lib/components/progress-spinner/progress-spinner';
 export * from './lib/types/progress-spinner.types';
+
+export * from './lib/components/panel/panel';
+export * from './lib/types/panel.types';
+
+export * from './lib/components/toast/toast';
+export * from './lib/types/toast.types';
+
+export * from './lib/components/avatar/avatar';
+export * from './lib/types/avatar.types';

@@ -1,0 +1,37 @@
+:host {
+  --vlm-toast-radius: 8px;
+  --vlm-toast-font-weight: 500;
+  --vlm-toast-font-size: 14px;
+  --vlm-toast-line-height: 1.4;
+  --vlm-toast-gap: 12px;
+  --vlm-toast-padding-block: 10px;
+  --vlm-toast-padding-inline: 14px;
+  --vlm-toast-disabled-opacity: 0.5;
+  --vlm-toast-shadow: 0 2px 8px color-mix(in oklch, black 12%, transparent);
+
+  --vlm-toast-remove-size: 20px;
+  --vlm-toast-remove-icon-size: 9px;
+  --vlm-toast-remove-hover-bg: color-mix(in oklch, currentColor 18%, transparent);
+
+  --vlm-toast-outlined-bg: var(--vlm-color-bg);
+
+  --vlm-toast-primary-bg: var(--vlm-color-primary);
+  --vlm-toast-primary-fg: var(--vlm-color-primary-foreground);
+  --vlm-toast-primary-color: var(--vlm-color-primary-text);
+
+  --vlm-toast-secondary-bg: var(--vlm-color-secondary);
+  --vlm-toast-secondary-fg: var(--vlm-color-secondary-foreground);
+  --vlm-toast-secondary-color: var(--vlm-color-secondary-text);
+
+  --vlm-toast-info-bg: var(--vlm-color-info);
+  --vlm-toast-info-fg: var(--vlm-color-info-foreground);
+  --vlm-toast-info-color: var(--vlm-color-info-text);
+
+  --vlm-toast-success-bg: var(--vlm-color-success);
+  --vlm-toast-success-fg: var(--vlm-color-success-foreground);
+  --vlm-toast-success-color: var(--vlm-color-success-text);
+
+  --vlm-toast-warning-bg: var(--vlm-color-warning);
+  --vlm-toast-warning-fg: var(--vlm-color-warning-foreground);
+  --vlm-toast-warning-color: var(--vlm-color-warning-text);
+}

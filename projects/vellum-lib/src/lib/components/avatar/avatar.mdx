@@ -1,0 +1,46 @@
+import { Canvas, Controls, Meta, Primary, Stories } from '@storybook/addon-docs/blocks';
+import * as AvatarStories from './avatar.stories';
+
+<Meta of={AvatarStories} />
+
+# Avatar
+
+A standalone, unstyled-by-default `vlm-avatar`. Renders an image when `useUrl` is true and
+`url` is set, otherwise falls back to a text `placeholder` (e.g. initials). Visual values
+come from the `--vlm-avatar-*` CSS custom properties in `_avatar.tokens.css`.
+
+<Primary />
+
+## Props
+
+<Controls />
+
+## Placeholder fallback
+
+When `useUrl` is `false`, or no `url` is provided, the `placeholder` text is shown instead
+of an image.
+
+<Canvas of={AvatarStories.Placeholder} />
+
+## Sizes
+
+`xs` through `xxl`.
+
+<Canvas of={AvatarStories.Sizes} />
+
+## Variants
+
+`round` (default), `rounded`, and `square`.
+
+<Canvas of={AvatarStories.Variants} />
+
+## Clickable
+
+Setting `clickable` renders the avatar with a `button` role, keyboard interaction, and a
+hover ring, and emits `clicked` when pressed.
+
+<Canvas of={AvatarStories.Clickable} />
+
+## All stories
+
+<Stories />

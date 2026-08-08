@@ -1,0 +1,52 @@
+:host {
+  --vlm-panel-radius: 8px;
+  --vlm-panel-header-font-weight: 600;
+  --vlm-panel-transition-duration: 200ms;
+  --vlm-panel-disabled-opacity: 0.5;
+
+  --vlm-panel-bg: var(--vlm-color-bg);
+  --vlm-panel-color: var(--vlm-color-text);
+
+  --vlm-panel-primary-border: var(--vlm-color-primary-text);
+  --vlm-panel-secondary-border: var(--vlm-color-secondary-text);
+  --vlm-panel-info-border: var(--vlm-color-info-text);
+  --vlm-panel-success-border: var(--vlm-color-success-text);
+  --vlm-panel-warning-border: var(--vlm-color-warning-text);
+  --vlm-panel-neutral-border: var(--vlm-color-border);
+
+  --vlm-panel-size-xs-padding-block: 6px;
+  --vlm-panel-size-xs-padding-inline: 10px;
+  --vlm-panel-size-xs-font-size: 12px;
+  --vlm-panel-size-xs-gap: 6px;
+  --vlm-panel-size-xs-chevron-size: 12px;
+
+  --vlm-panel-size-sm-padding-block: 8px;
+  --vlm-panel-size-sm-padding-inline: 12px;
+  --vlm-panel-size-sm-font-size: 13px;
+  --vlm-panel-size-sm-gap: 8px;
+  --vlm-panel-size-sm-chevron-size: 14px;
+
+  --vlm-panel-size-md-padding-block: 10px;
+  --vlm-panel-size-md-padding-inline: 14px;
+  --vlm-panel-size-md-font-size: 14px;
+  --vlm-panel-size-md-gap: 8px;
+  --vlm-panel-size-md-chevron-size: 16px;
+
+  --vlm-panel-size-lg-padding-block: 12px;
+  --vlm-panel-size-lg-padding-inline: 16px;
+  --vlm-panel-size-lg-font-size: 16px;
+  --vlm-panel-size-lg-gap: 10px;
+  --vlm-panel-size-lg-chevron-size: 18px;
+
+  --vlm-panel-size-xl-padding-block: 14px;
+  --vlm-panel-size-xl-padding-inline: 18px;
+  --vlm-panel-size-xl-font-size: 18px;
+  --vlm-panel-size-xl-gap: 10px;
+  --vlm-panel-size-xl-chevron-size: 20px;
+
+  --vlm-panel-size-xxl-padding-block: 16px;
+  --vlm-panel-size-xxl-padding-inline: 20px;
+  --vlm-panel-size-xxl-font-size: 20px;
+  --vlm-panel-size-xxl-gap: 12px;
+  --vlm-panel-size-xxl-chevron-size: 22px;
+}
