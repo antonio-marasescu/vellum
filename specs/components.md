@@ -18,7 +18,7 @@
 
 # Input Component
 
-- [ ] Finished
+- [x] Finished
 
 - Will implement https://angular.dev/api/forms/signals/FormUiControl#errors (will value=model, disabled, valid, errors)
 
@@ -30,7 +30,7 @@
 - variant: basic | outlined (default basic)
 - inputType: https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/input (the values from here)
 - required: boolean (to display an "*") (default false)
-- id: string (optional for aria)
+- id: string (required, for aria/label association)
 
 ## Outputs
 

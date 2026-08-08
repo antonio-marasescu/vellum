@@ -1,0 +1,47 @@
+:host {
+  --vlm-input-radius: 6px;
+  --vlm-input-font-weight: 400;
+  --vlm-input-transition-duration: 150ms;
+  --vlm-input-disabled-opacity: 0.5;
+  --vlm-input-focus-ring-width: 2px;
+  --vlm-input-gap: 6px;
+
+  --vlm-input-color: var(--vlm-color-text);
+  --vlm-input-placeholder-color: var(--vlm-color-text-muted);
+
+  --vlm-input-basic-bg: var(--vlm-color-bg-surface);
+  --vlm-input-outlined-bg: transparent;
+  --vlm-input-outlined-border-color: var(--vlm-color-border);
+
+  --vlm-input-primary-color: var(--vlm-color-primary-text);
+  --vlm-input-secondary-color: var(--vlm-color-secondary-text);
+  --vlm-input-error-color: var(--vlm-color-error);
+
+  --vlm-input-label-color: var(--vlm-color-text);
+  --vlm-input-label-font-size: 13px;
+  --vlm-input-label-font-weight: 500;
+  --vlm-input-required-color: var(--vlm-color-error-text);
+
+  --vlm-input-error-text-color: var(--vlm-color-error-text);
+  --vlm-input-error-font-size: 12px;
+
+  --vlm-input-size-xs-padding-block: 4px;
+  --vlm-input-size-xs-padding-inline: 8px;
+  --vlm-input-size-xs-font-size: 12px;
+
+  --vlm-input-size-sm-padding-block: 6px;
+  --vlm-input-size-sm-padding-inline: 10px;
+  --vlm-input-size-sm-font-size: 13px;
+
+  --vlm-input-size-md-padding-block: 8px;
+  --vlm-input-size-md-padding-inline: 12px;
+  --vlm-input-size-md-font-size: 14px;
+
+  --vlm-input-size-lg-padding-block: 10px;
+  --vlm-input-size-lg-padding-inline: 14px;
+  --vlm-input-size-lg-font-size: 16px;
+
+  --vlm-input-size-xl-padding-block: 12px;
+  --vlm-input-size-xl-padding-inline: 16px;
+  --vlm-input-size-xl-font-size: 18px;
+}

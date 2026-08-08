@@ -1,0 +1,33 @@
+<div class="vlm-input flex w-full flex-col gap-[var(--vlm-input-gap)]">
+  @if (label()) {
+    <label
+      [attr.for]="id()"
+      class="vlm-input__label text-[length:var(--vlm-input-label-font-size)] font-[weight:var(--vlm-input-label-font-weight)] text-[color:var(--vlm-input-label-color)]"
+    >
+      {{ label() }}
+      @if (required()) {
+        <span class="text-[color:var(--vlm-input-required-color)]" aria-hidden="true">*</span>
+      }
+    </label>
+  }
+  <input
+    [id]="id()"
+    [type]="inputType()"
+    [class]="inputClasses()"
+    [value]="value()"
+    [disabled]="disabled()"
+    [attr.aria-required]="required() || null"
+    [attr.aria-invalid]="invalid() || null"
+    [attr.aria-describedby]="showError() ? errorId() : null"
+    (input)="onInput($event)"
+    (blur)="onBlur()"
+  />
+  @if (showError()) {
+    <span
+      [id]="errorId()"
+      class="vlm-input__error text-[length:var(--vlm-input-error-font-size)] text-[color:var(--vlm-input-error-text-color)]"
+    >
+      {{ errorMessage() }}
+    </span>
+  }
+</div>
