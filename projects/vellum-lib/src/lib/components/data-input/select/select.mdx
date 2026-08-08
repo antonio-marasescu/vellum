@@ -1,0 +1,54 @@
+import {Canvas, Controls, Meta, Primary, Stories} from '@storybook/addon-docs/blocks';
+import * as SelectStories from './select.stories';
+
+<Meta of={SelectStories} />
+
+# Select
+
+A standalone, unstyled-by-default `vlm-select`, wrapping a native `<select>`. Pass native
+`<option>`/`<optgroup>` elements as content. Visual values come from the `--vlm-select-*`
+CSS custom properties in `_select.tokens.css`; theme and size are chosen via inputs.
+
+`vlm-select` implements Angular's [`FormValueControl`](https://angular.dev/api/forms/signals/FormValueControl)
+contract, so it can be bound directly with the `[field]` directive from
+`@angular/forms/signals` — `disabled`, `invalid`, `errors`, `touched` and `required`
+are kept in sync automatically, and blur is reported back via the `touch` output.
+
+<Primary />
+
+## Props
+
+<Controls />
+
+## Variants
+
+`basic` and `outlined`, in both themes.
+
+<Canvas of={SelectStories.Variants} />
+
+## Sizes
+
+`xs` through `xl`.
+
+<Canvas of={SelectStories.Sizes} />
+
+## Required
+
+Setting `required` renders a `*` next to the label and sets `aria-required`.
+
+<Canvas of={SelectStories.Required} />
+
+## Disabled
+
+<Canvas of={SelectStories.Disabled} />
+
+## Invalid
+
+Error text is only shown once the field is both `touched` and has `errors` —
+matching how a bound signal-forms field reports state.
+
+<Canvas of={SelectStories.Invalid} />
+
+## All stories
+
+<Stories />

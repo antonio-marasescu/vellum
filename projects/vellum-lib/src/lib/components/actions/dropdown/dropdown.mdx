@@ -1,0 +1,33 @@
+import {Canvas, Controls, Meta, Primary, Stories} from '@storybook/addon-docs/blocks';
+import * as DropdownStories from './dropdown.stories';
+
+<Meta of={DropdownStories} />
+
+# Dropdown
+
+A standalone, unstyled-by-default `vlm-dropdown` — wraps `vlm-button` as its trigger
+(forwarding `label`/`size`/`theme`/`variant`/`useIcon`/`preIcon`/`postIcon`) and opens a
+menu of `items` on click, positioned with `@angular/cdk/overlay`. `items` is a list of
+`{ key, value }` pairs — `value` is the label shown in the menu, `key` is what's emitted
+by `selected` when a row is clicked.
+
+<Primary />
+
+## Props
+
+<Controls />
+
+## Themes
+
+`primary`, `secondary`, `info`, `success`, and `warning` — same theme set as Button, since
+the trigger is a `vlm-button`.
+
+<Canvas of={DropdownStories.Themes} />
+
+## Disabled
+
+<Canvas of={DropdownStories.Disabled} />
+
+## All stories
+
+<Stories />

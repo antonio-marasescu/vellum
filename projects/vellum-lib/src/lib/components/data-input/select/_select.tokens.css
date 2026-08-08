@@ -1,0 +1,51 @@
+:host {
+  --vlm-select-radius: 6px;
+  --vlm-select-font-weight: 400;
+  --vlm-select-transition-duration: 150ms;
+  --vlm-select-disabled-opacity: 0.5;
+  --vlm-select-focus-ring-width: 2px;
+  --vlm-select-gap: 6px;
+
+  --vlm-select-color: var(--vlm-color-text);
+
+  --vlm-select-basic-bg: var(--vlm-color-bg-surface);
+  --vlm-select-outlined-bg: var(--vlm-color-bg);
+  --vlm-select-outlined-border-color: var(--vlm-color-border);
+
+  --vlm-select-primary-color: var(--vlm-color-primary-text);
+  --vlm-select-secondary-color: var(--vlm-color-secondary-text);
+  --vlm-select-error-color: var(--vlm-color-error);
+
+  --vlm-select-label-color: var(--vlm-color-text);
+  --vlm-select-label-font-size: 13px;
+  --vlm-select-label-font-weight: 500;
+  --vlm-select-required-color: var(--vlm-color-error-text);
+
+  --vlm-select-error-text-color: var(--vlm-color-error-text);
+  --vlm-select-error-font-size: 12px;
+
+  --vlm-select-chevron-color: var(--vlm-color-text-muted);
+  --vlm-select-chevron-size: 14px;
+  --vlm-select-chevron-inset: 10px;
+  --vlm-select-chevron-padding: 28px;
+
+  --vlm-select-size-xs-padding-block: 4px;
+  --vlm-select-size-xs-padding-inline: 8px;
+  --vlm-select-size-xs-font-size: 12px;
+
+  --vlm-select-size-sm-padding-block: 6px;
+  --vlm-select-size-sm-padding-inline: 10px;
+  --vlm-select-size-sm-font-size: 13px;
+
+  --vlm-select-size-md-padding-block: 8px;
+  --vlm-select-size-md-padding-inline: 12px;
+  --vlm-select-size-md-font-size: 14px;
+
+  --vlm-select-size-lg-padding-block: 10px;
+  --vlm-select-size-lg-padding-inline: 14px;
+  --vlm-select-size-lg-font-size: 16px;
+
+  --vlm-select-size-xl-padding-block: 12px;
+  --vlm-select-size-xl-padding-inline: 16px;
+  --vlm-select-size-xl-font-size: 18px;
+}

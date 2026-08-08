@@ -226,8 +226,14 @@
 
 # Select Component
 
-- [ ] Finished
+- [x] Finished
 
+- Wraps a native `<select>`; options are passed as ng-content (native `<option>`/
+  `<optgroup>` elements), like a plain `<select>`.
+- Implements https://angular.dev/api/forms/signals/FormValueControl (value=model,
+  disabled, valid, errors), same as Input implements FormValueControl. No separate
+  change output — the `value` model's implicit `valueChange` is the only change signal,
+  matching Input.
 
 ## Inputs
 
@@ -235,14 +241,12 @@
 - size: xs | sm | md | lg | xl (default: md)
 - theme: primary | secondary (default primary)
 - variant: basic | outlined (default basic)
-- inputType: https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/input (the values from here)
 - required: boolean (to display an "*") (default false)
 - id: string (required, for aria/label association)
 
-
 ## Outputs
 
-- change: Event emitted when the group value changes.
+- none (the `value` model's implicit `valueChange` is the only change signal)
 
 # Toggle Component
 
@@ -270,27 +274,40 @@
 
 # Swap Button Component
 
-- [ ] Finished
+- [x] Finished
 
-- A button that swaps between two icons both provided via ng-content. Intended for theme control
-- Question how do we control the size?
-- It should have a flip animation
+- A round, fab-style button that swaps between two icons, both provided via ng-content
+  (`swapOff` / `swapOn` attribute slots). Intended for theme control (e.g. light/dark
+  toggle).
+- Size is controlled the same way Button's `fab` variant is: `size` maps to a diameter
+  token (xs-xxl), since this is always an icon-only round button.
+- Transition is a crossfade + scale between the two icon layers (not a 3D flip).
+- `swapped` is a model<boolean> (two-way bindable via `[(swapped)]`) so a consumer can
+  read/drive which icon is showing, in addition to the `clicked` output.
 
 ## Inputs
 
-- size: xs | sm | md | lg | xl | xxl
+- swapped: boolean (model, two-way bindable via `[(swapped)]`) (default false)
+- size: xs | sm | md | lg | xl | xxl (default: md)
 - disabled: boolean (default false)
 - id: string (optional for aria)
 
 ## Outputs
 
-- click: output<void>
+- clicked: output<void>
 
 # Dropdown Component
 
-- [ ] Finished
+- [x] Finished
 
-- Dropdown can open a menu or any other element when the button is clicked.
+- Dropdown opens a menu when the button is clicked. The trigger wraps `vlm-button`
+  directly (forwarding label/size/theme/variant/useIcon/preIcon/postIcon), so it looks
+  and themes identically to a plain button. The menu is positioned with
+  `@angular/cdk/overlay` (the library's first use of CDK Overlay) so it handles viewport
+  clipping/scroll correctly, dismisses on backdrop click or Escape, and toggles closed on
+  a second trigger click.
+- `items` is `{ key: string; value: string }[]` — `value` is the label shown in the menu
+  row, `key` is what's emitted by `selected`.
 
 ## Inputs
 
@@ -301,9 +318,9 @@
 - variant: basic | text | outlined (default basic) | fab (a round button) | fab-outlined
 - useIcon: boolean (actual icon is passed as ng-content via pre-icon or post-icon for positioning)
 - id: string (optional for aria)
-- items: a list of key-value pairs (the value is the label)
+- items: { key: string; value: string }[] (value is the label)
 
 ## Outputs
 
-- click: output<void> (when the main button was clicked)
+- clicked: output<void> (when the main button was clicked)
 - selected: output<string>

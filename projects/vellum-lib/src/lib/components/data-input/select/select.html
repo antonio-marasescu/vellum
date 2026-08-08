@@ -1,0 +1,48 @@
+<div class="vlm-select flex w-full flex-col gap-[var(--vlm-select-gap)]">
+  @if (label()) {
+    <label
+      [attr.for]="id()"
+      class="vlm-select__label text-[length:var(--vlm-select-label-font-size)] font-[weight:var(--vlm-select-label-font-weight)] text-[color:var(--vlm-select-label-color)]"
+    >
+      {{ label() }}
+      @if (required()) {
+        <span class="text-[color:var(--vlm-select-required-color)]" aria-hidden="true">*</span>
+      }
+    </label>
+  }
+  <span class="relative inline-flex w-full">
+    <select
+      [id]="id()"
+      [class]="selectClasses()"
+      [value]="value()"
+      [disabled]="disabled()"
+      [attr.aria-required]="required() || null"
+      [attr.aria-invalid]="invalid() || null"
+      [attr.aria-describedby]="showError() ? errorId() : null"
+      (change)="onChange($event)"
+      (blur)="onBlur()"
+    >
+      <ng-content></ng-content>
+    </select>
+    <svg
+      class="vlm-select__chevron pointer-events-none absolute top-1/2 right-[var(--vlm-select-chevron-inset)] h-[var(--vlm-select-chevron-size)] w-[var(--vlm-select-chevron-size)] -translate-y-1/2 text-[color:var(--vlm-select-chevron-color)]"
+      viewBox="0 0 16 16"
+      fill="none"
+      stroke="currentColor"
+      stroke-width="1.5"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      aria-hidden="true"
+    >
+      <path d="M4 6L8 10L12 6" />
+    </svg>
+  </span>
+  @if (showError()) {
+    <span
+      [id]="errorId()"
+      class="vlm-select__error text-[length:var(--vlm-select-error-font-size)] text-[color:var(--vlm-select-error-text-color)]"
+    >
+      {{ errorMessage() }}
+    </span>
+  }
+</div>

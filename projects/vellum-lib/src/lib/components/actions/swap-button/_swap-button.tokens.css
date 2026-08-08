@@ -1,0 +1,28 @@
+:host {
+  --vlm-swap-button-radius: 50%;
+  --vlm-swap-button-transition-duration: 150ms;
+  --vlm-swap-button-disabled-opacity: 0.5;
+  --vlm-swap-button-inactive-scale: 0.6;
+
+  --vlm-swap-button-bg: transparent;
+  --vlm-swap-button-bg-hover: var(--vlm-color-bg-surface-hover);
+  --vlm-swap-button-color: var(--vlm-color-text);
+
+  --vlm-swap-button-size-xs-diameter: 28px;
+  --vlm-swap-button-size-xs-icon-size: 14px;
+
+  --vlm-swap-button-size-sm-diameter: 32px;
+  --vlm-swap-button-size-sm-icon-size: 16px;
+
+  --vlm-swap-button-size-md-diameter: 40px;
+  --vlm-swap-button-size-md-icon-size: 20px;
+
+  --vlm-swap-button-size-lg-diameter: 48px;
+  --vlm-swap-button-size-lg-icon-size: 24px;
+
+  --vlm-swap-button-size-xl-diameter: 56px;
+  --vlm-swap-button-size-xl-icon-size: 28px;
+
+  --vlm-swap-button-size-xxl-diameter: 64px;
+  --vlm-swap-button-size-xxl-icon-size: 32px;
+}

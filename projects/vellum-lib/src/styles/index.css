@@ -3,6 +3,7 @@
 @source '../lib/**/*.html';
 @source '../lib/**/*.ts';
 
+@import '@angular/cdk/overlay-prebuilt.css';
 @import './_colors.tokens.css';
 @import './_typography.tokens.css';
 @import './fonts.css';

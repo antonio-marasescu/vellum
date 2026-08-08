@@ -1,0 +1,20 @@
+/*
+ * Scoped to .vlm-dropdown__panel, not :host: the panel is portaled into the CDK overlay
+ * container (appended to document.body), so it's never a DOM descendant of the host —
+ * :host-scoped custom properties wouldn't cascade to it.
+ */
+.vlm-dropdown__panel {
+  --vlm-dropdown-radius: 6px;
+  --vlm-dropdown-panel-min-width: 160px;
+  --vlm-dropdown-panel-padding-block: 4px;
+  --vlm-dropdown-item-padding-block: 8px;
+  --vlm-dropdown-item-padding-inline: 12px;
+  --vlm-dropdown-item-font-size: 14px;
+
+  --vlm-dropdown-panel-bg: var(--vlm-color-bg);
+  --vlm-dropdown-panel-color: var(--vlm-color-text);
+  --vlm-dropdown-panel-border-color: var(--vlm-color-border);
+  --vlm-dropdown-panel-shadow: 0 4px 12px color-mix(in oklch, black 12%, transparent);
+
+  --vlm-dropdown-item-hover-bg: var(--vlm-color-bg-surface-hover);
+}

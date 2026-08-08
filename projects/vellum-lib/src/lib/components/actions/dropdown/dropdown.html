@@ -1,0 +1,24 @@
+<vlm-button
+  #trigger
+  [label]="label()"
+  [size]="size()"
+  [disabled]="disabled()"
+  [theme]="theme()"
+  [variant]="variant()"
+  [useIcon]="useIcon()"
+  [id]="id()"
+  (clicked)="onTriggerClick()"
+>
+  <ng-content select="[preIcon]"></ng-content>
+  <ng-content select="[postIcon]"></ng-content>
+</vlm-button>
+
+<ng-template #menu>
+  <div [class]="panelClasses" role="menu">
+    @for (item of items(); track item.key) {
+      <button type="button" role="menuitem" [class]="itemClasses" (click)="onItemSelected(item)">
+        {{ item.value }}
+      </button>
+    }
+  </div>
+</ng-template>

@@ -1,0 +1,37 @@
+import {Canvas, Controls, Meta, Primary, Stories} from '@storybook/addon-docs/blocks';
+import * as SwapButtonStories from './swap-button.stories';
+
+<Meta of={SwapButtonStories} />
+
+# Swap Button
+
+A standalone, unstyled-by-default `vlm-swap-button` — a round icon button that swaps
+between two icons on click. Pass the two icons via the `swapOff` / `swapOn` attribute
+slots; the transition is a crossfade + scale, not a full flip. `swapped` is a two-way
+bindable model — `false` shows `swapOff`, `true` shows `swapOn` — so a consumer can also
+read or drive which icon is active from outside (e.g. syncing with a `[data-theme]`
+attribute for a light/dark toggle).
+
+<Primary />
+
+## Props
+
+<Controls />
+
+## Sizes
+
+`xs` through `xxl`.
+
+<Canvas of={SwapButtonStories.Sizes} />
+
+## Swapped
+
+<Canvas of={SwapButtonStories.Swapped} />
+
+## Disabled
+
+<Canvas of={SwapButtonStories.Disabled} />
+
+## All stories
+
+<Stories />
