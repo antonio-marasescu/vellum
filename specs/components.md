@@ -324,3 +324,58 @@
 
 - clicked: output<void> (when the main button was clicked)
 - selected: output<string>
+
+# Menu Component
+
+- [x] Finished
+- Category: Navigation (lives under `components/navigation/`, `theming/navigation/`,
+  `types/navigation/`, distinct from Actions)
+
+- A navigational list of items, similar to DaisyUI's `menu`
+  (https://daisyui.com/components/menu/). Structured like Button Toggle Group: a
+  `vlm-menu` container carries shared `size`/`theme`/`disabled`, and each `vlm-menu-item`
+  injects it via DI for its own size/theme/disabled styling (like `vlm-button-toggle`
+  injects `vlm-button-toggle-group`).
+- Item content (label, and typically an `<a>`/`routerLink`) is passed as ng-content, so
+  the consumer controls navigation — `vlm-menu-item` only supplies structure and theming.
+  `active` (current page/section highlighting) is a plain per-item input the consumer
+  sets from their own router state — there's no group-level selection model (unlike
+  Radio Group), since "current page" isn't something the menu itself decides.
+- Nesting (e.g. `Products` disclosing `All products` / `Electronics` / `Clothing`) is a
+  `vlm-menu` placed inside a `vlm-menu-item`'s `menuItems` slot — the same component
+  reused recursively, so nesting depth isn't limited to one level.
+- A `vlm-menu-item` with content projected into `menuItems` renders a chevron and gets
+  disclosure behavior like Panel: clicking the row toggles the `expanded` model,
+  showing/hiding the nested `vlm-menu`, and `clicked` is *not* emitted for that click (the
+  row's job is to disclose, not to act). A `vlm-menu-item` with nothing in `menuItems` is
+  a flat row that emits `clicked` on click, same as Chip.
+
+### Menu
+
+## Inputs
+
+- size: xs | sm | md | lg | xl | xxl (default: md)
+- theme: primary | secondary | info | success | warning (default primary)
+- id: string (optional for aria)
+- vertical: boolean (default true)
+- disabled: boolean (default false; disables every item, unless a `vlm-menu-item`
+  overrides it with its own `disabled`)
+
+## Outputs
+
+- none
+
+### Menu Item
+
+## Inputs
+
+- active: boolean (highlights the item as the current page/section) (default false)
+- disabled: boolean (default false)
+- id: string (optional for aria)
+- expanded: boolean (model, two-way bindable via `[(expanded)]`; only meaningful when
+  content is projected into the `menuItems` slot) (default false)
+
+## Outputs
+
+- clicked: output<void> (emitted when a leaf item — one with no `menuItems` content — is
+  clicked; items with a nested submenu toggle `expanded` instead and don't emit this)

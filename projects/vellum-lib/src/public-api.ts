@@ -53,3 +53,8 @@ export * from './lib/types/actions/swap-button.types';
 
 export * from './lib/components/actions/dropdown/dropdown';
 export * from './lib/types/actions/dropdown.types';
+
+// Navigation
+export * from './lib/components/navigation/menu/menu-item/menu-item';
+export * from './lib/components/navigation/menu/menu';
+export * from './lib/types/navigation/menu.types';

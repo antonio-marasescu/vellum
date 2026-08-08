@@ -1,0 +1,67 @@
+import {Canvas, Controls, Meta, Primary, Stories} from '@storybook/addon-docs/blocks';
+import * as MenuStories from './menu.stories';
+
+<Meta of={MenuStories} />
+
+# Menu
+
+A standalone, unstyled-by-default `vlm-menu` — a navigational list of items, similar to
+[DaisyUI's `menu`](https://daisyui.com/components/menu/). `vlm-menu` carries shared
+`size`/`theme`/`disabled` and each `vlm-menu-item` injects it via DI, the same pattern
+`vlm-button-toggle` uses with `vlm-button-toggle-group`.
+
+Item content (label, and typically an `<a>`/`routerLink`) is passed as `ng-content` —
+`vlm-menu-item` only supplies structure and theming, navigation is entirely up to the
+consumer. `active` (current page/section highlighting) is a plain per-item input the
+consumer sets from their own router state.
+
+## Nesting
+
+Project a `vlm-menu` into a `vlm-menu-item`'s `menuItems` slot to create a submenu — the
+same `vlm-menu`/`vlm-menu-item` pair, reused recursively, so nesting isn't limited to one
+level. An item with content in `menuItems` renders a chevron and toggles its `expanded`
+model on click instead of emitting `clicked`.
+
+<Primary />
+
+## Props
+
+<Controls />
+
+## Horizontal
+
+<Canvas of={MenuStories.Horizontal} />
+
+## Themes
+
+`primary`, `secondary`, `info`, `success`, and `warning` — applied to whichever item has
+`active` set.
+
+<Canvas of={MenuStories.Themes} />
+
+## Nested
+
+<Canvas of={MenuStories.Nested} />
+
+## Nested (horizontal)
+
+When the top-level `vlm-menu` is horizontal, a submenu renders as a floating panel
+anchored below its trigger item instead of an in-flow accordion — sized to its own
+content rather than squeezed to the trigger row's width.
+
+<Canvas of={MenuStories.NestedHorizontal} />
+
+## Deeply nested
+
+Nesting isn't limited to one level — each `menuItems` submenu shifts further right via
+`--vlm-menu-item-submenu-indent`.
+
+<Canvas of={MenuStories.DeeplyNested} />
+
+## Disabled
+
+<Canvas of={MenuStories.Disabled} />
+
+## All stories
+
+<Stories />

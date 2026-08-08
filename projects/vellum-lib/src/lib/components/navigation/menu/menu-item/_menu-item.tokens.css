@@ -1,0 +1,66 @@
+:host {
+  --vlm-menu-item-radius: 6px;
+  --vlm-menu-item-font-weight: 500;
+  --vlm-menu-item-transition-duration: 150ms;
+  --vlm-menu-item-disabled-opacity: 0.5;
+  --vlm-menu-item-submenu-indent: 12px;
+  --vlm-menu-item-submenu-offset: 4px;
+  --vlm-menu-item-submenu-min-width: 160px;
+  --vlm-menu-item-submenu-panel-bg: var(--vlm-color-bg);
+  --vlm-menu-item-submenu-panel-border-color: var(--vlm-color-border);
+  --vlm-menu-item-submenu-panel-shadow: 0 4px 12px color-mix(in oklch, black 12%, transparent);
+
+  --vlm-menu-item-color: var(--vlm-color-text);
+  --vlm-menu-item-hover-bg: var(--vlm-color-bg-surface-hover);
+
+  --vlm-menu-primary-bg: var(--vlm-color-primary);
+  --vlm-menu-primary-fg: var(--vlm-color-primary-foreground);
+
+  --vlm-menu-secondary-bg: var(--vlm-color-secondary);
+  --vlm-menu-secondary-fg: var(--vlm-color-secondary-foreground);
+
+  --vlm-menu-info-bg: var(--vlm-color-info);
+  --vlm-menu-info-fg: var(--vlm-color-info-foreground);
+
+  --vlm-menu-success-bg: var(--vlm-color-success);
+  --vlm-menu-success-fg: var(--vlm-color-success-foreground);
+
+  --vlm-menu-warning-bg: var(--vlm-color-warning);
+  --vlm-menu-warning-fg: var(--vlm-color-warning-foreground);
+
+  --vlm-menu-size-xs-padding-block: 4px;
+  --vlm-menu-size-xs-padding-inline: 8px;
+  --vlm-menu-size-xs-font-size: 12px;
+  --vlm-menu-size-xs-gap: 6px;
+  --vlm-menu-size-xs-chevron-size: 12px;
+
+  --vlm-menu-size-sm-padding-block: 6px;
+  --vlm-menu-size-sm-padding-inline: 10px;
+  --vlm-menu-size-sm-font-size: 13px;
+  --vlm-menu-size-sm-gap: 6px;
+  --vlm-menu-size-sm-chevron-size: 13px;
+
+  --vlm-menu-size-md-padding-block: 8px;
+  --vlm-menu-size-md-padding-inline: 12px;
+  --vlm-menu-size-md-font-size: 14px;
+  --vlm-menu-size-md-gap: 8px;
+  --vlm-menu-size-md-chevron-size: 14px;
+
+  --vlm-menu-size-lg-padding-block: 10px;
+  --vlm-menu-size-lg-padding-inline: 14px;
+  --vlm-menu-size-lg-font-size: 16px;
+  --vlm-menu-size-lg-gap: 8px;
+  --vlm-menu-size-lg-chevron-size: 16px;
+
+  --vlm-menu-size-xl-padding-block: 12px;
+  --vlm-menu-size-xl-padding-inline: 16px;
+  --vlm-menu-size-xl-font-size: 18px;
+  --vlm-menu-size-xl-gap: 10px;
+  --vlm-menu-size-xl-chevron-size: 18px;
+
+  --vlm-menu-size-xxl-padding-block: 14px;
+  --vlm-menu-size-xxl-padding-inline: 18px;
+  --vlm-menu-size-xxl-font-size: 20px;
+  --vlm-menu-size-xxl-gap: 12px;
+  --vlm-menu-size-xxl-chevron-size: 20px;
+}
