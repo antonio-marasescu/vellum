@@ -8,7 +8,10 @@ const meta: Meta<Button> = {
   component: Button,
   argTypes: {
     size: { control: 'select', options: ['xs', 'sm', 'md', 'lg', 'xl', 'xxl'] },
-    theme: { control: 'select', options: ['primary', 'secondary'] },
+    theme: {
+      control: 'select',
+      options: ['primary', 'secondary', 'info', 'success', 'warning']
+    },
     variant: {
       control: 'select',
       options: ['basic', 'text', 'outlined', 'fab', 'fab-outlined']
@@ -43,6 +46,21 @@ export const Variants: Story = {
         <vlm-button ${argsToTemplate(args, { exclude: ['variant'] })} variant="basic"></vlm-button>
         <vlm-button ${argsToTemplate(args, { exclude: ['variant'] })} variant="text"></vlm-button>
         <vlm-button ${argsToTemplate(args, { exclude: ['variant'] })} variant="outlined"></vlm-button>
+      </div>
+    `
+  })
+};
+
+export const Themes: Story = {
+  render: args => ({
+    props: args,
+    template: `
+      <div style="display: flex; gap: 12px; align-items: center;">
+        <vlm-button ${argsToTemplate(args, { exclude: ['theme', 'label'] })} theme="primary" label="Primary"></vlm-button>
+        <vlm-button ${argsToTemplate(args, { exclude: ['theme', 'label'] })} theme="secondary" label="Secondary"></vlm-button>
+        <vlm-button ${argsToTemplate(args, { exclude: ['theme', 'label'] })} theme="info" label="Info"></vlm-button>
+        <vlm-button ${argsToTemplate(args, { exclude: ['theme', 'label'] })} theme="success" label="Success"></vlm-button>
+        <vlm-button ${argsToTemplate(args, { exclude: ['theme', 'label'] })} theme="warning" label="Warning"></vlm-button>
       </div>
     `
   })

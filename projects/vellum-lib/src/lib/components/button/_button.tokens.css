@@ -60,4 +60,34 @@
     var(--vlm-button-secondary-color) 14%,
     transparent
   );
+
+  --vlm-button-info-bg: var(--vlm-color-info);
+  --vlm-button-info-bg-hover: var(--vlm-color-info-hover);
+  --vlm-button-info-fg: var(--vlm-color-info-foreground);
+  --vlm-button-info-color: var(--vlm-color-info-text);
+  --vlm-button-info-bg-hover-subtle: color-mix(
+    in oklch,
+    var(--vlm-button-info-color) 14%,
+    transparent
+  );
+
+  --vlm-button-success-bg: var(--vlm-color-success);
+  --vlm-button-success-bg-hover: var(--vlm-color-success-hover);
+  --vlm-button-success-fg: var(--vlm-color-success-foreground);
+  --vlm-button-success-color: var(--vlm-color-success-text);
+  --vlm-button-success-bg-hover-subtle: color-mix(
+    in oklch,
+    var(--vlm-button-success-color) 14%,
+    transparent
+  );
+
+  --vlm-button-warning-bg: var(--vlm-color-warning);
+  --vlm-button-warning-bg-hover: var(--vlm-color-warning-hover);
+  --vlm-button-warning-fg: var(--vlm-color-warning-foreground);
+  --vlm-button-warning-color: var(--vlm-color-warning-text);
+  --vlm-button-warning-bg-hover-subtle: color-mix(
+    in oklch,
+    var(--vlm-button-warning-color) 14%,
+    transparent
+  );
 }

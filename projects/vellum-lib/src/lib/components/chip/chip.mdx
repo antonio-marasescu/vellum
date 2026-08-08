@@ -1,0 +1,57 @@
+import { Canvas, Controls, Meta, Primary, Stories } from '@storybook/addon-docs/blocks';
+import * as ChipStories from './chip.stories';
+
+<Meta of={ChipStories} />
+
+# Chip
+
+A standalone, unstyled-by-default `vlm-chip`. Visual values come from the
+`--vlm-chip-*` CSS custom properties in `_chip.tokens.css`; theme and size
+are chosen via inputs. Content is passed as `ng-content`.
+
+<Primary />
+
+## Props
+
+<Controls />
+
+## Themes
+
+`primary`, `secondary`, `info`, `success`, and `warning`.
+
+<Canvas of={ChipStories.Themes} />
+
+## Sizes
+
+`xs` through `xxl`.
+
+<Canvas of={ChipStories.Sizes} />
+
+## Removable
+
+Setting `removable` renders an "x" that emits `removed` instead of `clicked`
+when pressed.
+
+<Canvas of={ChipStories.Removable} />
+
+## Highlighted
+
+Forces the hover-highlight background, regardless of actual pointer hover.
+
+<Canvas of={ChipStories.Highlighted} />
+
+## Disabled
+
+<Canvas of={ChipStories.Disabled} />
+
+## Not clickable
+
+Setting `clickable` to `false` drops the `clicked` output, the `button` role/hover
+styling, and keyboard interaction on the chip body — it behaves like a static tag.
+The remove button is unaffected and still works when `removable` is `true`.
+
+<Canvas of={ChipStories.NotClickable} />
+
+## All stories
+
+<Stories />

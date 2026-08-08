@@ -1,0 +1,59 @@
+:host {
+  --vlm-chip-radius: 999px;
+  --vlm-chip-font-weight: 500;
+  --vlm-chip-transition-duration: 150ms;
+  --vlm-chip-disabled-opacity: 0.5;
+  --vlm-chip-remove-size: 18px;
+  --vlm-chip-remove-icon-size: 8px;
+  --vlm-chip-remove-hover-bg: color-mix(in oklch, currentColor 18%, transparent);
+
+  --vlm-chip-primary-bg: var(--vlm-color-primary);
+  --vlm-chip-primary-bg-hover: var(--vlm-color-primary-hover);
+  --vlm-chip-primary-fg: var(--vlm-color-primary-foreground);
+
+  --vlm-chip-secondary-bg: var(--vlm-color-secondary);
+  --vlm-chip-secondary-bg-hover: var(--vlm-color-secondary-hover);
+  --vlm-chip-secondary-fg: var(--vlm-color-secondary-foreground);
+
+  --vlm-chip-info-bg: var(--vlm-color-info);
+  --vlm-chip-info-bg-hover: var(--vlm-color-info-hover);
+  --vlm-chip-info-fg: var(--vlm-color-info-foreground);
+
+  --vlm-chip-success-bg: var(--vlm-color-success);
+  --vlm-chip-success-bg-hover: var(--vlm-color-success-hover);
+  --vlm-chip-success-fg: var(--vlm-color-success-foreground);
+
+  --vlm-chip-warning-bg: var(--vlm-color-warning);
+  --vlm-chip-warning-bg-hover: var(--vlm-color-warning-hover);
+  --vlm-chip-warning-fg: var(--vlm-color-warning-foreground);
+
+  --vlm-chip-size-xs-padding-block: 2px;
+  --vlm-chip-size-xs-padding-inline: 8px;
+  --vlm-chip-size-xs-font-size: 11px;
+  --vlm-chip-size-xs-gap: 4px;
+
+  --vlm-chip-size-sm-padding-block: 3px;
+  --vlm-chip-size-sm-padding-inline: 10px;
+  --vlm-chip-size-sm-font-size: 12px;
+  --vlm-chip-size-sm-gap: 4px;
+
+  --vlm-chip-size-md-padding-block: 4px;
+  --vlm-chip-size-md-padding-inline: 12px;
+  --vlm-chip-size-md-font-size: 13px;
+  --vlm-chip-size-md-gap: 6px;
+
+  --vlm-chip-size-lg-padding-block: 6px;
+  --vlm-chip-size-lg-padding-inline: 14px;
+  --vlm-chip-size-lg-font-size: 14px;
+  --vlm-chip-size-lg-gap: 6px;
+
+  --vlm-chip-size-xl-padding-block: 8px;
+  --vlm-chip-size-xl-padding-inline: 16px;
+  --vlm-chip-size-xl-font-size: 16px;
+  --vlm-chip-size-xl-gap: 8px;
+
+  --vlm-chip-size-xxl-padding-block: 10px;
+  --vlm-chip-size-xxl-padding-inline: 18px;
+  --vlm-chip-size-xxl-font-size: 18px;
+  --vlm-chip-size-xxl-gap: 8px;
+}

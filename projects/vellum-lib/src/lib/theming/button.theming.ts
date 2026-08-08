@@ -15,19 +15,34 @@ export const FAMILY_THEME_CLASSES: Record<ButtonFamily, Record<ButtonTheme, stri
     primary:
       'border-transparent bg-[color:var(--vlm-button-primary-bg)] text-[color:var(--vlm-button-primary-fg)] enabled:hover:bg-[color:var(--vlm-button-primary-bg-hover)]',
     secondary:
-      'border-transparent bg-[color:var(--vlm-button-secondary-bg)] text-[color:var(--vlm-button-secondary-fg)] enabled:hover:bg-[color:var(--vlm-button-secondary-bg-hover)]'
+      'border-transparent bg-[color:var(--vlm-button-secondary-bg)] text-[color:var(--vlm-button-secondary-fg)] enabled:hover:bg-[color:var(--vlm-button-secondary-bg-hover)]',
+    info: 'border-transparent bg-[color:var(--vlm-button-info-bg)] text-[color:var(--vlm-button-info-fg)] enabled:hover:bg-[color:var(--vlm-button-info-bg-hover)]',
+    success:
+      'border-transparent bg-[color:var(--vlm-button-success-bg)] text-[color:var(--vlm-button-success-fg)] enabled:hover:bg-[color:var(--vlm-button-success-bg-hover)]',
+    warning:
+      'border-transparent bg-[color:var(--vlm-button-warning-bg)] text-[color:var(--vlm-button-warning-fg)] enabled:hover:bg-[color:var(--vlm-button-warning-bg-hover)]'
   },
   text: {
     primary:
       'border-transparent bg-transparent text-[color:var(--vlm-button-primary-color)] enabled:hover:bg-[color:var(--vlm-button-primary-bg-hover-subtle)]',
     secondary:
-      'border-transparent bg-transparent text-[color:var(--vlm-button-secondary-color)] enabled:hover:bg-[color:var(--vlm-button-secondary-bg-hover-subtle)]'
+      'border-transparent bg-transparent text-[color:var(--vlm-button-secondary-color)] enabled:hover:bg-[color:var(--vlm-button-secondary-bg-hover-subtle)]',
+    info: 'border-transparent bg-transparent text-[color:var(--vlm-button-info-color)] enabled:hover:bg-[color:var(--vlm-button-info-bg-hover-subtle)]',
+    success:
+      'border-transparent bg-transparent text-[color:var(--vlm-button-success-color)] enabled:hover:bg-[color:var(--vlm-button-success-bg-hover-subtle)]',
+    warning:
+      'border-transparent bg-transparent text-[color:var(--vlm-button-warning-color)] enabled:hover:bg-[color:var(--vlm-button-warning-bg-hover-subtle)]'
   },
   outlined: {
     primary:
       'bg-transparent text-[color:var(--vlm-button-primary-color)] border-[color:var(--vlm-button-primary-color)] enabled:hover:bg-[color:var(--vlm-button-primary-bg-hover-subtle)]',
     secondary:
-      'bg-transparent text-[color:var(--vlm-button-secondary-color)] border-[color:var(--vlm-button-secondary-color)] enabled:hover:bg-[color:var(--vlm-button-secondary-bg-hover-subtle)]'
+      'bg-transparent text-[color:var(--vlm-button-secondary-color)] border-[color:var(--vlm-button-secondary-color)] enabled:hover:bg-[color:var(--vlm-button-secondary-bg-hover-subtle)]',
+    info: 'bg-transparent text-[color:var(--vlm-button-info-color)] border-[color:var(--vlm-button-info-color)] enabled:hover:bg-[color:var(--vlm-button-info-bg-hover-subtle)]',
+    success:
+      'bg-transparent text-[color:var(--vlm-button-success-color)] border-[color:var(--vlm-button-success-color)] enabled:hover:bg-[color:var(--vlm-button-success-bg-hover-subtle)]',
+    warning:
+      'bg-transparent text-[color:var(--vlm-button-warning-color)] border-[color:var(--vlm-button-warning-color)] enabled:hover:bg-[color:var(--vlm-button-warning-bg-hover-subtle)]'
   }
 };
 
