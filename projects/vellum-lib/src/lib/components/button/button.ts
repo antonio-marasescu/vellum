@@ -1,4 +1,4 @@
-import { Component, input, output } from '@angular/core';
+import { Component, computed, input, output } from '@angular/core';
 import type { ButtonSize, ButtonTheme, ButtonVariant } from '../../types/button.types';
 
 @Component({
@@ -17,6 +17,10 @@ export class Button {
   readonly id = input<string>();
 
   readonly clicked = output<void>();
+
+  protected readonly isFab = computed(
+    () => this.variant() === 'fab' || this.variant() === 'fab-outlined'
+  );
 
   protected onClick(): void {
     if (this.disabled()) {

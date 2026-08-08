@@ -99,29 +99,29 @@
   &--fab {
     padding: 0;
     border-radius: var(--vlm-button-radius-fab);
+
+    &:not(.vlm-button--fab-outlined) {
+      &.vlm-button--primary {
+        background-color: var(--vlm-button-primary-bg);
+        color: var(--vlm-button-primary-fg);
+
+        &:not(:disabled):hover {
+          background-color: var(--vlm-button-primary-bg-hover);
+        }
+      }
+
+      &.vlm-button--secondary {
+        background-color: var(--vlm-button-secondary-bg);
+        color: var(--vlm-button-secondary-fg);
+
+        &:not(:disabled):hover {
+          background-color: var(--vlm-button-secondary-bg-hover);
+        }
+      }
+    }
   }
 
   &--basic {
-    &.vlm-button--primary {
-      background-color: var(--vlm-button-primary-bg);
-      color: var(--vlm-button-primary-fg);
-
-      &:not(:disabled):hover {
-        background-color: var(--vlm-button-primary-bg-hover);
-      }
-    }
-
-    &.vlm-button--secondary {
-      background-color: var(--vlm-button-secondary-bg);
-      color: var(--vlm-button-secondary-fg);
-
-      &:not(:disabled):hover {
-        background-color: var(--vlm-button-secondary-bg-hover);
-      }
-    }
-  }
-
-  &--fab {
     &.vlm-button--primary {
       background-color: var(--vlm-button-primary-bg);
       color: var(--vlm-button-primary-fg);
@@ -146,14 +146,18 @@
 
     &.vlm-button--primary {
       color: var(--vlm-button-primary-color);
+
+      &:not(:disabled):hover {
+        background-color: var(--vlm-button-primary-bg-hover-subtle);
+      }
     }
 
     &.vlm-button--secondary {
       color: var(--vlm-button-secondary-color);
-    }
 
-    &:not(:disabled):hover {
-      background-color: var(--vlm-button-neutral-bg-hover);
+      &:not(:disabled):hover {
+        background-color: var(--vlm-button-secondary-bg-hover-subtle);
+      }
     }
   }
 
@@ -163,15 +167,41 @@
     &.vlm-button--primary {
       color: var(--vlm-button-primary-color);
       border-color: var(--vlm-button-primary-color);
+
+      &:not(:disabled):hover {
+        background-color: var(--vlm-button-primary-bg-hover-subtle);
+      }
     }
 
     &.vlm-button--secondary {
       color: var(--vlm-button-secondary-color);
       border-color: var(--vlm-button-secondary-color);
+
+      &:not(:disabled):hover {
+        background-color: var(--vlm-button-secondary-bg-hover-subtle);
+      }
+    }
+  }
+
+  &--fab-outlined {
+    background-color: transparent;
+
+    &.vlm-button--primary {
+      color: var(--vlm-button-primary-color);
+      border-color: var(--vlm-button-primary-color);
+
+      &:not(:disabled):hover {
+        background-color: var(--vlm-button-primary-bg-hover-subtle);
+      }
     }
 
-    &:not(:disabled):hover {
-      background-color: var(--vlm-button-neutral-bg-hover);
+    &.vlm-button--secondary {
+      color: var(--vlm-button-secondary-color);
+      border-color: var(--vlm-button-secondary-color);
+
+      &:not(:disabled):hover {
+        background-color: var(--vlm-button-secondary-bg-hover-subtle);
+      }
     }
   }
 }

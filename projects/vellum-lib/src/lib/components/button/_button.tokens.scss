@@ -45,11 +45,19 @@
   --vlm-button-primary-bg-hover: var(--vlm-color-primary-hover);
   --vlm-button-primary-fg: var(--vlm-color-primary-foreground);
   --vlm-button-primary-color: var(--vlm-color-primary-text);
+  --vlm-button-primary-bg-hover-subtle: color-mix(
+    in oklch,
+    var(--vlm-button-primary-color) 14%,
+    transparent
+  );
 
   --vlm-button-secondary-bg: var(--vlm-color-secondary);
   --vlm-button-secondary-bg-hover: var(--vlm-color-secondary-hover);
   --vlm-button-secondary-fg: var(--vlm-color-secondary-foreground);
   --vlm-button-secondary-color: var(--vlm-color-secondary-text);
-
-  --vlm-button-neutral-bg-hover: var(--vlm-color-bg-surface-hover);
+  --vlm-button-secondary-bg-hover-subtle: color-mix(
+    in oklch,
+    var(--vlm-button-secondary-color) 14%,
+    transparent
+  );
 }

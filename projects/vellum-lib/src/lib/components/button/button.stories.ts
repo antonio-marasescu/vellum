@@ -1,4 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/angular-vite';
+import { argsToTemplate } from '@storybook/angular-vite';
+import { fn } from 'storybook/test';
 import { Button } from './button';
 
 const meta: Meta<Button> = {
@@ -7,7 +9,11 @@ const meta: Meta<Button> = {
   argTypes: {
     size: { control: 'select', options: ['xs', 'sm', 'md', 'lg', 'xl', 'xxl'] },
     theme: { control: 'select', options: ['primary', 'secondary'] },
-    variant: { control: 'select', options: ['basic', 'text', 'outlined', 'fab'] }
+    variant: {
+      control: 'select',
+      options: ['basic', 'text', 'outlined', 'fab', 'fab-outlined']
+    },
+    clicked: { action: 'clicked' }
   },
   args: {
     label: 'Click me',
@@ -15,8 +21,13 @@ const meta: Meta<Button> = {
     theme: 'primary',
     variant: 'basic',
     disabled: false,
-    useIcon: false
-  }
+    useIcon: false,
+    clicked: fn()
+  },
+  render: args => ({
+    props: args,
+    template: `<vlm-button ${argsToTemplate(args)}></vlm-button>`
+  })
 };
 
 export default meta;
@@ -29,9 +40,9 @@ export const Variants: Story = {
     props: args,
     template: `
       <div style="display: flex; gap: 12px; align-items: center;">
-        <vlm-button [label]="label" [theme]="theme" size="md" variant="basic"></vlm-button>
-        <vlm-button [label]="label" [theme]="theme" size="md" variant="text"></vlm-button>
-        <vlm-button [label]="label" [theme]="theme" size="md" variant="outlined"></vlm-button>
+        <vlm-button ${argsToTemplate(args, { exclude: ['variant'] })} variant="basic"></vlm-button>
+        <vlm-button ${argsToTemplate(args, { exclude: ['variant'] })} variant="text"></vlm-button>
+        <vlm-button ${argsToTemplate(args, { exclude: ['variant'] })} variant="outlined"></vlm-button>
       </div>
     `
   })
@@ -42,28 +53,44 @@ export const Sizes: Story = {
     props: args,
     template: `
       <div style="display: flex; gap: 12px; align-items: center;">
-        <vlm-button label="xs" size="xs"></vlm-button>
-        <vlm-button label="sm" size="sm"></vlm-button>
-        <vlm-button label="md" size="md"></vlm-button>
-        <vlm-button label="lg" size="lg"></vlm-button>
-        <vlm-button label="xl" size="xl"></vlm-button>
-        <vlm-button label="xxl" size="xxl"></vlm-button>
+        <vlm-button ${argsToTemplate(args, { exclude: ['size', 'label'] })} size="xs" label="xs"></vlm-button>
+        <vlm-button ${argsToTemplate(args, { exclude: ['size', 'label'] })} size="sm" label="sm"></vlm-button>
+        <vlm-button ${argsToTemplate(args, { exclude: ['size', 'label'] })} size="md" label="md"></vlm-button>
+        <vlm-button ${argsToTemplate(args, { exclude: ['size', 'label'] })} size="lg" label="lg"></vlm-button>
+        <vlm-button ${argsToTemplate(args, { exclude: ['size', 'label'] })} size="xl" label="xl"></vlm-button>
+        <vlm-button ${argsToTemplate(args, { exclude: ['size', 'label'] })} size="xxl" label="xxl"></vlm-button>
       </div>
     `
   })
 };
 
 export const Fab: Story = {
-  render: () => ({
-    template: `<vlm-button label="Add" variant="fab" size="lg">
-      <span preIcon>+</span>
-    </vlm-button>`
+  args: {
+    size: 'lg'
+  },
+  render: args => ({
+    props: args,
+    template: `
+      <div style="display: flex; gap: 12px; align-items: center;">
+        <vlm-button ${argsToTemplate(args, { exclude: ['variant'] })} variant="fab">
+          <span preIcon>+</span>
+        </vlm-button>
+        <vlm-button ${argsToTemplate(args, { exclude: ['variant'] })} variant="fab-outlined">
+          <span preIcon>+</span>
+        </vlm-button>
+      </div>
+    `
   })
 };
 
 export const WithIcon: Story = {
-  render: () => ({
-    template: `<vlm-button label="Download" [useIcon]="true">
+  args: {
+    label: 'Download',
+    useIcon: true
+  },
+  render: args => ({
+    props: args,
+    template: `<vlm-button ${argsToTemplate(args)}>
       <span preIcon>&#8595;</span>
     </vlm-button>`
   })

@@ -1,12 +1,14 @@
 # Button Component
 
+- [x] Finished
+
 ## Inputs
 
 - label: string (optional)
 - size: xs | sm | md | lg | xl | xxl
 - disabled: boolean (default false)
 - theme: primary | accent (default primary)
-- variant: basic | text | outlined (default basic) | fab (a round button)
+- variant: basic | text | outlined (default basic) | fab (a round button) | fab-outlined
 - useIcon: boolean (actual icon is passed as ng-content via pre-icon or post-icon for positioning)
 - id: string (optional for aria)
 
@@ -15,6 +17,8 @@
 - click: output<void>
 
 # Input Component
+
+- [ ] Finished
 
 - Will implement https://angular.dev/api/forms/signals/FormUiControl#errors (will value=model, disabled, valid, errors)
 
@@ -35,6 +39,8 @@
 
 # Chip Component
 
+- [ ] Finished
+
 ## Inputs
 
 - content: will be passed as ng-content
@@ -52,6 +58,8 @@
 
 # Button Toggle Group alongside with mat-button-toggle
 
+- [ ] Finished
+
 - Simlar to this, but we want a simplified version without aria for now, and of course ids
 ```html
 <p>
@@ -64,6 +72,8 @@
 </p>
 ```
 ### Button Toggle Group
+
+- [ ] Finished
 
 ## Inputs
 
@@ -82,6 +92,8 @@
 
 # Divider Component
 
+- [ ] Finished
+
 ## Inputs
 
 - vertical: boolean
@@ -97,9 +109,13 @@
 
 # Panel Component 
 
+- [ ] Finished
+
 - Similar to an expansion panel, using ng-content
 
 # Progress Spinner
+
+- [ ] Finished
 
 ## Inputs
 

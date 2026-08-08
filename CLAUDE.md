@@ -23,6 +23,11 @@ layout) — for behavior only, never for styling.
 - `pnpm lint` / `pnpm format` — ESLint / Prettier.
 - `pnpm storybook` / `pnpm build-storybook` — component docs & visual dev.
 
+A PostToolUse hook already runs `pnpm run format` and `pnpm run lint` after every
+`Edit`/`Write`/`MultiEdit` — don't re-run `lint`/`format`/`format:check` yourself after
+editing files, it's redundant. The hook does not typecheck, so a one-off `tsc`/build check
+is still fine when there's a specific reason to doubt a type-level change.
+
 ## Component anatomy
 
 Every component under `projects/vellum-lib/src/lib/components/<name>/` gets this fixed

@@ -69,4 +69,15 @@ describe('Button', () => {
     expect(button.querySelector('.vlm-button__label')).toBeNull();
     expect(button.getAttribute('aria-label')).toBe('Add');
   });
+
+  it('should not render a visible label for the fab-outlined variant', () => {
+    fixture.componentRef.setInput('label', 'Add');
+    fixture.componentRef.setInput('variant', 'fab-outlined');
+    fixture.detectChanges();
+
+    const button: HTMLButtonElement = fixture.nativeElement.querySelector('button');
+    expect(button.querySelector('.vlm-button__label')).toBeNull();
+    expect(button.getAttribute('aria-label')).toBe('Add');
+    expect(button.classList).toContain('vlm-button--fab');
+  });
 });
