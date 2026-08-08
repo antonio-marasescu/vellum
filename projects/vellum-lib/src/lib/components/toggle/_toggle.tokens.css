@@ -1,0 +1,60 @@
+:host {
+  --vlm-toggle-radius: 999px;
+  --vlm-toggle-font-weight: 400;
+  --vlm-toggle-transition-duration: 200ms;
+  --vlm-toggle-thumb-transition-delay: 40ms;
+  --vlm-toggle-disabled-opacity: 0.5;
+  --vlm-toggle-focus-ring-width: 2px;
+  --vlm-toggle-gap: 8px;
+  --vlm-toggle-border-width: 1px;
+  --vlm-toggle-thumb-inset: 2px;
+
+  --vlm-toggle-label-color: var(--vlm-color-text);
+  --vlm-toggle-required-color: var(--vlm-color-error-text);
+
+  --vlm-toggle-error-text-color: var(--vlm-color-error-text);
+  --vlm-toggle-error-font-size: 12px;
+
+  --vlm-toggle-unchecked-border-color: var(--vlm-color-border);
+  --vlm-toggle-unchecked-bg: var(--vlm-color-bg-surface);
+  --vlm-toggle-unchecked-thumb-color: var(--vlm-color-text-muted);
+
+  --vlm-toggle-primary-color: var(--vlm-color-primary);
+  --vlm-toggle-primary-fg: var(--vlm-color-primary-foreground);
+
+  --vlm-toggle-secondary-color: var(--vlm-color-secondary-hover);
+  --vlm-toggle-secondary-fg: var(--vlm-color-secondary-foreground);
+
+  --vlm-toggle-error-color: var(--vlm-color-error);
+  --vlm-toggle-error-fg: var(--vlm-color-error-foreground);
+
+  --vlm-toggle-size-xs-track-width: 28px;
+  --vlm-toggle-size-xs-track-height: 16px;
+  --vlm-toggle-size-xs-thumb-size: 12px;
+  --vlm-toggle-size-xs-thumb-travel: 12px;
+  --vlm-toggle-size-xs-font-size: 12px;
+
+  --vlm-toggle-size-sm-track-width: 32px;
+  --vlm-toggle-size-sm-track-height: 18px;
+  --vlm-toggle-size-sm-thumb-size: 14px;
+  --vlm-toggle-size-sm-thumb-travel: 14px;
+  --vlm-toggle-size-sm-font-size: 13px;
+
+  --vlm-toggle-size-md-track-width: 40px;
+  --vlm-toggle-size-md-track-height: 22px;
+  --vlm-toggle-size-md-thumb-size: 18px;
+  --vlm-toggle-size-md-thumb-travel: 18px;
+  --vlm-toggle-size-md-font-size: 14px;
+
+  --vlm-toggle-size-lg-track-width: 46px;
+  --vlm-toggle-size-lg-track-height: 26px;
+  --vlm-toggle-size-lg-thumb-size: 22px;
+  --vlm-toggle-size-lg-thumb-travel: 20px;
+  --vlm-toggle-size-lg-font-size: 16px;
+
+  --vlm-toggle-size-xl-track-width: 52px;
+  --vlm-toggle-size-xl-track-height: 30px;
+  --vlm-toggle-size-xl-thumb-size: 26px;
+  --vlm-toggle-size-xl-thumb-travel: 22px;
+  --vlm-toggle-size-xl-font-size: 18px;
+}

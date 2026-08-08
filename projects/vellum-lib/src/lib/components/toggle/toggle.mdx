@@ -1,0 +1,59 @@
+import {Canvas, Controls, Meta, Primary, Stories} from '@storybook/addon-docs/blocks';
+import * as ToggleStories from './toggle.stories';
+
+<Meta of={ToggleStories} />
+
+# Toggle
+
+A standalone, unstyled-by-default `vlm-toggle` — a switch-style boolean control (track
++ sliding thumb), distinct from `vlm-checkbox`'s box-and-checkmark appearance. Visual
+values come from the `--vlm-toggle-*` CSS custom properties in `_toggle.tokens.css`;
+theme and size are chosen via inputs.
+
+`vlm-toggle` implements Angular's [`FormCheckboxControl`](https://angular.dev/api/forms/signals/FormCheckboxControl)
+contract, so it can be bound directly with the `[field]` directive from
+`@angular/forms/signals` — `disabled`, `invalid`, `errors`, `touched` and `required`
+are kept in sync automatically, and blur is reported back via the `touch` output.
+
+<Primary />
+
+## Props
+
+<Controls />
+
+## Themes
+
+`primary` and `secondary`.
+
+<Canvas of={ToggleStories.Themes} />
+
+## Sizes
+
+`xs` through `xl`.
+
+<Canvas of={ToggleStories.Sizes} />
+
+## Checked
+
+<Canvas of={ToggleStories.Checked} />
+
+## Required
+
+Setting `required` renders a `*` next to the label.
+
+<Canvas of={ToggleStories.Required} />
+
+## Disabled
+
+<Canvas of={ToggleStories.Disabled} />
+
+## Invalid
+
+Error text is only shown once the field is both `touched` and has `errors` — matching
+how a bound signal-forms field reports state.
+
+<Canvas of={ToggleStories.Invalid} />
+
+## All stories
+
+<Stories />

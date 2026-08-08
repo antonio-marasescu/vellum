@@ -164,44 +164,65 @@
 
 # Checkbox Component
 
-- [ ] Finished
+- [x] Finished
 
-
-## Inputs
-
-- label: string (optional)
-- size: xs | sm | md | lg | xl (default: md)
-- theme: primary | secondary (default primary)
-- variant: basic | outlined (default basic)
-- inputType: https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/input (the values from here)
-- required: boolean (to display an "*") (default false)
-- id: string (required, for aria/label association)
-
-
-## Outputs
-
-- change: Event emitted when the group value changes.
-
-
-# Radio Component
-
-- [ ] Finished
-
+- Implements https://angular.dev/api/forms/signals/FormCheckboxControl (checked=model,
+  disabled, valid, errors), same as Input implements FormValueControl.
 
 ## Inputs
 
+- checked: boolean (model, two-way bindable via `[(checked)]`) (default false)
 - label: string (optional)
 - size: xs | sm | md | lg | xl (default: md)
 - theme: primary | secondary (default primary)
-- variant: basic | outlined (default basic)
-- inputType: https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/input (the values from here)
 - required: boolean (to display an "*") (default false)
 - id: string (required, for aria/label association)
 
+## Outputs
+
+- none (the `checked` model's implicit `checkedChange` is the only change signal)
+
+
+# Radio Component + Radio Group
+
+- [x] Finished
+
+- A radio only makes sense as part of a group (like Button Toggle Group), so there is a
+  `vlm-radio-group` wrapper implementing
+  https://angular.dev/api/forms/signals/FormValueControl (value=model, disabled, valid,
+  errors) and a dumb `vlm-radio` child that injects the group for its
+  theme/size/disabled/selected state, similar to how `vlm-button-toggle` injects
+  `vlm-button-toggle-group`.
+
+### Radio Group
+
+## Inputs
+
+- value: string (model, two-way bindable via `[(value)]`) (default '')
+- size: xs | sm | md | lg | xl (default: md)
+- theme: primary | secondary (default primary)
+- name: string (optional, HTML's 'name' attribute for the underlying radio inputs)
+- required: boolean (default false)
+- id: string (optional for aria)
+- vertical: boolean (default true)
+- disabled: boolean (default false)
 
 ## Outputs
 
-- change: Event emitted when the group value changes.
+- none (the `value` model's implicit `valueChange` is the only change signal)
+
+### Radio
+
+## Inputs
+
+- value: string (required, the identifier this radio represents within the group)
+- label: string (optional)
+- disabled: boolean (default false)
+- id: string (optional for aria)
+
+## Outputs
+
+- none
 
 # Select Component
 
@@ -225,23 +246,27 @@
 
 # Toggle Component
 
-- [ ] Finished
+- [x] Finished
 
+- A switch-style boolean control (track + sliding thumb), distinct from Checkbox's
+  box-and-checkmark appearance. Implements
+  https://angular.dev/api/forms/signals/FormCheckboxControl (checked=model, disabled,
+  valid, errors), same contract as Checkbox.
+- The thumb transitions with a short delay after the track color starts changing, so the
+  flip doesn't feel instantaneous/jarring.
 
 ## Inputs
 
+- checked: boolean (model, two-way bindable via `[(checked)]`) (default false)
 - label: string (optional)
 - size: xs | sm | md | lg | xl (default: md)
 - theme: primary | secondary (default primary)
-- variant: basic | outlined (default basic)
-- inputType: https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/input (the values from here)
 - required: boolean (to display an "*") (default false)
 - id: string (required, for aria/label association)
 
-
 ## Outputs
 
-- change: Event emitted when the group value changes.
+- none (the `checked` model's implicit `checkedChange` is the only change signal)
 
 # Swap Button Component
 

@@ -1,0 +1,42 @@
+:host {
+  --vlm-checkbox-radius: 4px;
+  --vlm-checkbox-font-weight: 400;
+  --vlm-checkbox-transition-duration: 150ms;
+  --vlm-checkbox-disabled-opacity: 0.5;
+  --vlm-checkbox-focus-ring-width: 2px;
+  --vlm-checkbox-gap: 8px;
+  --vlm-checkbox-border-width: 1px;
+
+  --vlm-checkbox-label-color: var(--vlm-color-text);
+  --vlm-checkbox-required-color: var(--vlm-color-error-text);
+
+  --vlm-checkbox-error-text-color: var(--vlm-color-error-text);
+  --vlm-checkbox-error-font-size: 12px;
+
+  --vlm-checkbox-unchecked-border-color: var(--vlm-color-border);
+  --vlm-checkbox-unchecked-bg: var(--vlm-color-bg-surface);
+
+  --vlm-checkbox-primary-color: var(--vlm-color-primary);
+  --vlm-checkbox-primary-fg: var(--vlm-color-primary-foreground);
+
+  --vlm-checkbox-secondary-color: var(--vlm-color-secondary-hover);
+  --vlm-checkbox-secondary-fg: var(--vlm-color-secondary-foreground);
+
+  --vlm-checkbox-error-color: var(--vlm-color-error);
+  --vlm-checkbox-error-fg: var(--vlm-color-error-foreground);
+
+  --vlm-checkbox-size-xs-box-size: 14px;
+  --vlm-checkbox-size-xs-font-size: 12px;
+
+  --vlm-checkbox-size-sm-box-size: 16px;
+  --vlm-checkbox-size-sm-font-size: 13px;
+
+  --vlm-checkbox-size-md-box-size: 18px;
+  --vlm-checkbox-size-md-font-size: 14px;
+
+  --vlm-checkbox-size-lg-box-size: 20px;
+  --vlm-checkbox-size-lg-font-size: 16px;
+
+  --vlm-checkbox-size-xl-box-size: 22px;
+  --vlm-checkbox-size-xl-font-size: 18px;
+}

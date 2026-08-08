@@ -1,0 +1,42 @@
+:host {
+  --vlm-radio-font-weight: 400;
+  --vlm-radio-transition-duration: 150ms;
+  --vlm-radio-disabled-opacity: 0.5;
+  --vlm-radio-focus-ring-width: 2px;
+  --vlm-radio-gap: 8px;
+  --vlm-radio-border-width: 1px;
+
+  --vlm-radio-label-color: var(--vlm-color-text);
+
+  --vlm-radio-unchecked-border-color: var(--vlm-color-border);
+  --vlm-radio-unchecked-bg: var(--vlm-color-bg-surface);
+
+  --vlm-radio-primary-color: var(--vlm-color-primary);
+  --vlm-radio-primary-fg: var(--vlm-color-primary-foreground);
+
+  --vlm-radio-secondary-color: var(--vlm-color-secondary-hover);
+  --vlm-radio-secondary-fg: var(--vlm-color-secondary-foreground);
+
+  --vlm-radio-error-color: var(--vlm-color-error);
+  --vlm-radio-error-fg: var(--vlm-color-error-foreground);
+
+  --vlm-radio-size-xs-box-size: 14px;
+  --vlm-radio-size-xs-dot-size: 6px;
+  --vlm-radio-size-xs-font-size: 12px;
+
+  --vlm-radio-size-sm-box-size: 16px;
+  --vlm-radio-size-sm-dot-size: 7px;
+  --vlm-radio-size-sm-font-size: 13px;
+
+  --vlm-radio-size-md-box-size: 18px;
+  --vlm-radio-size-md-dot-size: 8px;
+  --vlm-radio-size-md-font-size: 14px;
+
+  --vlm-radio-size-lg-box-size: 20px;
+  --vlm-radio-size-lg-dot-size: 9px;
+  --vlm-radio-size-lg-font-size: 16px;
+
+  --vlm-radio-size-xl-box-size: 22px;
+  --vlm-radio-size-xl-dot-size: 10px;
+  --vlm-radio-size-xl-font-size: 18px;
+}

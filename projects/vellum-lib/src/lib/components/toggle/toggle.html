@@ -1,0 +1,42 @@
+<div class="vlm-toggle flex flex-col gap-[var(--vlm-toggle-gap)]">
+  <label
+    [class]="labelClasses()"
+    class="vlm-toggle__wrapper inline-flex items-center gap-[var(--vlm-toggle-gap)]"
+  >
+    <span class="relative inline-flex">
+      <input
+        class="peer absolute h-full w-full cursor-pointer opacity-0"
+        type="checkbox"
+        role="switch"
+        [id]="id()"
+        [checked]="checked()"
+        [disabled]="disabled()"
+        [attr.aria-checked]="checked()"
+        [attr.aria-required]="required() || null"
+        [attr.aria-invalid]="invalid() || null"
+        [attr.aria-describedby]="showError() ? errorId() : null"
+        (change)="onChange($event)"
+        (blur)="onBlur()"
+      />
+      <span [class]="trackClasses()" aria-hidden="true">
+        <span [class]="thumbClasses()"></span>
+      </span>
+    </span>
+    @if (label()) {
+      <span>
+        {{ label() }}
+        @if (required()) {
+          <span class="text-[color:var(--vlm-toggle-required-color)]" aria-hidden="true">*</span>
+        }
+      </span>
+    }
+  </label>
+  @if (showError()) {
+    <span
+      [id]="errorId()"
+      class="vlm-toggle__error text-[length:var(--vlm-toggle-error-font-size)] text-[color:var(--vlm-toggle-error-text-color)]"
+    >
+      {{ errorMessage() }}
+    </span>
+  }
+</div>

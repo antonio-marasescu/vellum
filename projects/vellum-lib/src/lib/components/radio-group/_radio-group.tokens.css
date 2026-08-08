@@ -1,0 +1,5 @@
+:host {
+  --vlm-radio-group-gap: 8px;
+  --vlm-radio-group-error-font-size: 12px;
+  --vlm-radio-group-error-text-color: var(--vlm-color-error-text);
+}

@@ -1,0 +1,50 @@
+import {Canvas, Controls, Meta, Primary, Stories} from '@storybook/addon-docs/blocks';
+import * as RadioGroupStories from './radio-group.stories';
+
+<Meta of={RadioGroupStories} />
+
+# Radio Group
+
+A standalone, unstyled-by-default `vlm-radio-group`. Wrap `vlm-radio` children inside
+it; each radio reads its `size`/`theme`/`disabled` and selection state from this group
+via dependency injection, so those props only need to be set once, on the group — a
+radio only makes sense as part of a group.
+
+`vlm-radio-group` implements Angular's [`FormValueControl`](https://angular.dev/api/forms/signals/FormValueControl)
+contract, so it can be bound directly with the `[field]` directive from
+`@angular/forms/signals` — `disabled`, `invalid`, `errors`, `touched` and `required`
+are kept in sync automatically, and blur (from any radio) is reported back via the
+`touch` output.
+
+<Primary />
+
+## Props
+
+<Controls />
+
+## Themes
+
+`primary` and `secondary`.
+
+<Canvas of={RadioGroupStories.Themes} />
+
+## Horizontal
+
+By default the group lays out vertically; set `vertical` to `false` for a row.
+
+<Canvas of={RadioGroupStories.Horizontal} />
+
+## Disabled
+
+<Canvas of={RadioGroupStories.Disabled} />
+
+## Invalid
+
+Error text is only shown once the field is both `touched` and has `errors` — matching
+how a bound signal-forms field reports state.
+
+<Canvas of={RadioGroupStories.Invalid} />
+
+## All stories
+
+<Stories />

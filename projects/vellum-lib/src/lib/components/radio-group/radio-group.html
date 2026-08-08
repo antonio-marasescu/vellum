@@ -1,0 +1,13 @@
+<div class="vlm-radio-group__wrapper flex flex-col gap-[var(--vlm-radio-group-gap)]">
+  <div [attr.id]="id()" [attr.name]="name()" [class]="groupClasses()">
+    <ng-content></ng-content>
+  </div>
+  @if (showError()) {
+    <span
+      [id]="errorId()"
+      class="vlm-radio-group__error text-[length:var(--vlm-radio-group-error-font-size)] text-[color:var(--vlm-radio-group-error-text-color)]"
+    >
+      {{ errorMessage() }}
+    </span>
+  }
+</div>
