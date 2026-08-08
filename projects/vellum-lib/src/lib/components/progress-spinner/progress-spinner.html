@@ -1,0 +1,41 @@
+@if (isIndeterminate()) {
+  <span
+    class="vlm-progress-spinner__loader inline-block"
+    [style.width.px]="diameter()"
+    [style.height.px]="diameter()"
+    [style.--vlm-progress-spinner-border-width.px]="strokeWidth()"
+    [style.--vlm-progress-spinner-inner-inset.px]="innerInset()"
+    [style.--vlm-progress-spinner-inner-color]="innerColorVar()"
+    role="progressbar"
+  ></span>
+} @else {
+  <svg
+    class="vlm-progress-spinner__svg block -rotate-90"
+    [attr.width]="diameter()"
+    [attr.height]="diameter()"
+    [attr.viewBox]="viewBox()"
+    role="progressbar"
+    [attr.aria-valuenow]="value()"
+    aria-valuemin="0"
+    aria-valuemax="100"
+  >
+    <circle
+      class="vlm-progress-spinner__track stroke-[color:var(--vlm-progress-spinner-track-color)]"
+      [attr.cx]="center()"
+      [attr.cy]="center()"
+      [attr.r]="radius()"
+      fill="none"
+      [attr.stroke-width]="strokeWidth()"
+    ></circle>
+    <circle
+      [class]="arcClasses()"
+      [attr.cx]="center()"
+      [attr.cy]="center()"
+      [attr.r]="innerRadius()"
+      fill="none"
+      [attr.stroke-width]="strokeWidth()"
+      [attr.stroke-dasharray]="innerCircumference()"
+      [attr.stroke-dashoffset]="dashOffset()"
+    ></circle>
+  </svg>
+}

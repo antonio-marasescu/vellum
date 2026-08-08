@@ -1,0 +1,45 @@
+import { Canvas, Controls, Meta, Primary, Stories } from '@storybook/addon-docs/blocks';
+import * as DividerStories from './divider.stories';
+
+<Meta of={DividerStories} />
+
+# Divider
+
+A standalone, unstyled-by-default `vlm-divider`. It has no content of its own — the host
+element only handles layout sizing, and an inner line element carries the actual visual
+styling, driven by the `--vlm-divider-*` CSS custom properties in `_divider.tokens.css`.
+
+<Primary />
+
+## Props
+
+<Controls />
+
+## Themes
+
+`neutral` (default), `primary`, and `secondary`.
+
+<Canvas of={DividerStories.Themes} />
+
+## Vertical
+
+Set `vertical` when placing the divider inside a flex row; it stretches to the height of
+its siblings via `self-stretch`.
+
+<Canvas of={DividerStories.Vertical} />
+
+## Inset
+
+Adds a leading margin so the line starts indented instead of spanning edge-to-edge.
+
+<Canvas of={DividerStories.Inset} />
+
+## Custom width
+
+`width` sets the line thickness in pixels.
+
+<Canvas of={DividerStories.CustomWidth} />
+
+## All stories
+
+<Stories />

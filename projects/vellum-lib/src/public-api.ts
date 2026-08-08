@@ -14,3 +14,8 @@ export * from './lib/types/chip.types';
 export * from './lib/components/button-toggle-group/button-toggle/button-toggle';
 export * from './lib/components/button-toggle-group/button-toggle-group';
 export * from './lib/types/button-toggle.types';
+
+export * from './lib/components/divider/divider';
+
+export * from './lib/components/progress-spinner/progress-spinner';
+export * from './lib/types/progress-spinner.types';

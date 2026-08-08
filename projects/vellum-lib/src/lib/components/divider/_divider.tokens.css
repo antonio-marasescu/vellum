@@ -1,0 +1,8 @@
+:host {
+  --vlm-divider-width: 1px;
+  --vlm-divider-inset-size: 16px;
+
+  --vlm-divider-neutral-color: var(--vlm-color-border);
+  --vlm-divider-primary-color: var(--vlm-color-primary);
+  --vlm-divider-secondary-color: var(--vlm-color-secondary-text);
+}

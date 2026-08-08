@@ -97,13 +97,14 @@
 
 # Divider Component
 
-- [ ] Finished
+- [x] Finished
 
 ## Inputs
 
 - vertical: boolean
 - inset: boolean
 - width: number (default 1px)
+- theme: primary | secondary | neutral (default neutral)
 
 ### Style info
 - color should be customizable via the theme
@@ -120,7 +121,7 @@
 
 # Progress Spinner Component
 
-- [ ] Finished
+- [x] Finished
 
 ## Inputs
 

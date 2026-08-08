@@ -1,0 +1,13 @@
+:host {
+  --vlm-progress-spinner-track-color: var(--vlm-color-border);
+  --vlm-progress-spinner-transition-duration: 200ms;
+  --vlm-progress-spinner-rotate-duration: 1s;
+  --vlm-progress-spinner-clip-duration: 2s;
+  --vlm-progress-spinner-inner-rotate-duration: 0.5s;
+
+  --vlm-progress-spinner-primary-color: var(--vlm-color-primary);
+  --vlm-progress-spinner-secondary-color: var(--vlm-color-secondary-text);
+  --vlm-progress-spinner-info-color: var(--vlm-color-info);
+  --vlm-progress-spinner-success-color: var(--vlm-color-success);
+  --vlm-progress-spinner-warning-color: var(--vlm-color-warning);
+}

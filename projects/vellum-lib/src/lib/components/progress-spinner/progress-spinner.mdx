@@ -1,0 +1,47 @@
+import { Canvas, Controls, Meta, Primary, Stories } from '@storybook/addon-docs/blocks';
+import * as ProgressSpinnerStories from './progress-spinner.stories';
+
+<Meta of={ProgressSpinnerStories} />
+
+# Progress Spinner
+
+A standalone, unstyled-by-default `vlm-progress-spinner`. Colors come from the
+`--vlm-progress-spinner-*` CSS custom properties in `_progress-spinner.tokens.css`.
+
+In `indeterminate` mode it's the classic css-loaders.com "dual ring" spinner: a static outer
+ring (the neutral default `--vlm-progress-spinner-track-color`) and a smaller, theme-colored
+inner ring that spins faster and in reverse. Both rings use the same "prixClipFix"
+`clip-path` sweep so the border appears to grow around the circle rather than being a
+fixed-length dash. Plain `border` + `clip-path` + `transform: rotate()` on `::before`/`::after`
+pseudo-elements, no SVG — the `@keyframes` live in `progress-spinner.css` since Tailwind
+can't express one. The three animation durations are fixed but still overridable via the
+`--vlm-progress-spinner-rotate-duration` / `-clip-duration` / `-inner-rotate-duration` tokens.
+
+In `determinate` mode (which has no equivalent in the ring pattern, since it has no concept
+of a value) it falls back to an SVG arc whose `stroke-dashoffset` reflects `value` directly.
+
+<Primary />
+
+## Props
+
+<Controls />
+
+## Themes
+
+<Canvas of={ProgressSpinnerStories.Themes} />
+
+## Determinate
+
+Set `mode` to `determinate` and drive `value` (0–100) yourself; the arc no longer spins.
+
+<Canvas of={ProgressSpinnerStories.Determinate} />
+
+## Custom size
+
+`diameter` and `strokeWidth` are plain pixel numbers.
+
+<Canvas of={ProgressSpinnerStories.CustomSize} />
+
+## All stories
+
+<Stories />

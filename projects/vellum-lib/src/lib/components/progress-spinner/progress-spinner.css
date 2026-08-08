@@ -1,0 +1,65 @@
+/*
+ * Dual-ring "css-loaders.com" spinner: a static outer ring (::before, the neutral default
+ * color) and a theme-colored inner ring (::after, smaller via `inset`) that spins faster and
+ * in reverse. Both use the same "prixClipFix" clip-path sweep (0% hidden -> 100% fully
+ * revealed, then resets) so the border appears to grow around the circle rather than being a
+ * fixed-length dash — no dasharray/dashoffset math needed here.
+ */
+@keyframes vlm-progress-spinner-rotate {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes vlm-progress-spinner-clip {
+  0% {
+    clip-path: polygon(50% 50%, 0 0, 0 0, 0 0, 0 0, 0 0);
+  }
+
+  25% {
+    clip-path: polygon(50% 50%, 0 0, 100% 0, 100% 0, 100% 0, 100% 0);
+  }
+
+  50% {
+    clip-path: polygon(50% 50%, 0 0, 100% 0, 100% 100%, 100% 100%, 100% 100%);
+  }
+
+  75% {
+    clip-path: polygon(50% 50%, 0 0, 100% 0, 100% 100%, 0 100%, 0 100%);
+  }
+
+  100% {
+    clip-path: polygon(50% 50%, 0 0, 100% 0, 100% 100%, 0 100%, 0 0);
+  }
+}
+
+.vlm-progress-spinner__loader {
+  position: relative;
+  border-radius: 50%;
+  animation: vlm-progress-spinner-rotate var(--vlm-progress-spinner-rotate-duration) linear infinite;
+}
+
+.vlm-progress-spinner__loader::before,
+.vlm-progress-spinner__loader::after {
+  content: '';
+  box-sizing: border-box;
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  border-style: solid;
+  border-width: var(--vlm-progress-spinner-border-width);
+  animation: vlm-progress-spinner-clip var(--vlm-progress-spinner-clip-duration) linear infinite;
+}
+
+.vlm-progress-spinner__loader::before {
+  border-color: var(--vlm-progress-spinner-track-color);
+}
+
+.vlm-progress-spinner__loader::after {
+  border-color: var(--vlm-progress-spinner-inner-color);
+  inset: var(--vlm-progress-spinner-inner-inset);
+  animation:
+    vlm-progress-spinner-clip var(--vlm-progress-spinner-clip-duration) linear infinite,
+    vlm-progress-spinner-rotate var(--vlm-progress-spinner-inner-rotate-duration) linear infinite
+      reverse;
+}
