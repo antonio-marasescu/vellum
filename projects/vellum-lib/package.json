@@ -12,6 +12,8 @@
   "sideEffects": false,
   "exports": {
     "./styles/index.css": "./styles/index.css",
+    "./styles/themes/light.css": "./styles/themes/light.css",
+    "./styles/themes/dark.css": "./styles/themes/dark.css",
     "./assets/*": "./assets/*"
   }
 }
