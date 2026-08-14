@@ -96,6 +96,15 @@ export class Icon {
     if (typeof size === 'number') {
       return `${size}px`;
     }
-    return `var(--vlm-icon-size-${size})`;
+    // Map size tokens to actual pixel values
+    const sizeMap: Record<string, string> = {
+      xs: '16px',
+      sm: '18px',
+      md: '24px',
+      lg: '32px',
+      xl: '48px',
+      xxl: '64px'
+    };
+    return sizeMap[size] || '20px';
   });
 }
