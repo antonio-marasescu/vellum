@@ -91,10 +91,10 @@ export const Fab: Story = {
     template: `
       <div style="display: flex; gap: 12px; align-items: center;">
         <vlm-button ${argsToTemplate(args, { exclude: ['variant'] })} variant="fab">
-          <span preIcon>+</span>
+          <img preIcon src="/icons/plus.svg" alt="" width="24" height="24" />
         </vlm-button>
         <vlm-button ${argsToTemplate(args, { exclude: ['variant'] })} variant="fab-outlined">
-          <span preIcon>+</span>
+          <img preIcon src="/icons/plus.svg" alt="" width="24" height="24" />
         </vlm-button>
       </div>
     `
@@ -109,7 +109,7 @@ export const WithIcon: Story = {
   render: args => ({
     props: args,
     template: `<vlm-button ${argsToTemplate(args)}>
-      <span preIcon>&#8595;</span>
+      <img preIcon src="/icons/download.svg" alt="" width="20" height="20" />
     </vlm-button>`
   })
 };

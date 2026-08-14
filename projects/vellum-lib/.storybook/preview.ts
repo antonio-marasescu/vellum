@@ -1,4 +1,4 @@
-import type { Preview } from '@storybook/angular-vite';
+import { Preview } from '@storybook/angular-vite';
 import '../src/styles/index.css';
 
 const preview: Preview = {
