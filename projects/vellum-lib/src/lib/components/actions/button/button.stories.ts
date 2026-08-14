@@ -1,11 +1,17 @@
 import type { Meta, StoryObj } from '@storybook/angular-vite';
-import { argsToTemplate } from '@storybook/angular-vite';
+import { argsToTemplate, moduleMetadata } from '@storybook/angular-vite';
 import { fn } from 'storybook/test';
 import { Button } from './button';
+import { Icon } from '../../data-display/icon/icon';
 
 const meta: Meta<Button> = {
   title: 'Actions/Button',
   component: Button,
+  decorators: [
+    moduleMetadata({
+      imports: [Icon]
+    })
+  ],
   argTypes: {
     size: { control: 'select', options: ['xs', 'sm', 'md', 'lg', 'xl', 'xxl'] },
     theme: {
@@ -91,10 +97,10 @@ export const Fab: Story = {
     template: `
       <div style="display: flex; gap: 12px; align-items: center;">
         <vlm-button ${argsToTemplate(args, { exclude: ['variant'] })} variant="fab">
-          <img preIcon src="/icons/plus.svg" alt="" width="24" height="24" />
+          <vlm-icon preIcon icon="plus" size="lg"></vlm-icon>
         </vlm-button>
         <vlm-button ${argsToTemplate(args, { exclude: ['variant'] })} variant="fab-outlined">
-          <img preIcon src="/icons/plus.svg" alt="" width="24" height="24" />
+          <vlm-icon preIcon icon="plus" size="lg"></vlm-icon>
         </vlm-button>
       </div>
     `
@@ -109,7 +115,7 @@ export const WithIcon: Story = {
   render: args => ({
     props: args,
     template: `<vlm-button ${argsToTemplate(args)}>
-      <img preIcon src="/icons/download.svg" alt="" width="20" height="20" />
+      <vlm-icon preIcon icon="download" size="md"></vlm-icon>
     </vlm-button>`
   })
 };
