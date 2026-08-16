@@ -25,17 +25,18 @@ describe('Icon', () => {
     fixture.detectChanges();
     const svgElement = fixture.nativeElement.querySelector('svg');
     expect(svgElement).toBeTruthy();
-    expect(svgElement?.classList.contains('vlm-icon-svg')).toBe(true);
+    expect(svgElement?.getAttribute('viewBox')).toBeTruthy();
   });
 
-  it('should return null for invalid icon', () => {
-    fixture.componentRef.setInput('icon', 'non-existent-icon' as any);
+  it('should not render SVG for invalid icon', () => {
+    fixture.componentRef.setInput('icon', 'non-existent-icon');
     fixture.detectChanges();
-    expect(component.parsedSvg()).toBeNull();
+    const svgElement = fixture.nativeElement.querySelector('svg');
+    expect(svgElement).toBeFalsy();
   });
 
-  it('should use default size', () => {
-    expect(component.iconSize()).toBe('var(--vlm-icon-size-md)');
+  it('should use default size (24px for md)', () => {
+    expect(component.iconSize()).toBe('24px');
   });
 
   it('should use custom pixel size', () => {
@@ -44,10 +45,16 @@ describe('Icon', () => {
     expect(component.iconSize()).toBe('32px');
   });
 
-  it('should use size token', () => {
+  it('should use size token (lg = 32px)', () => {
     fixture.componentRef.setInput('size', 'lg');
     fixture.detectChanges();
-    expect(component.iconSize()).toBe('var(--vlm-icon-size-lg)');
+    expect(component.iconSize()).toBe('32px');
+  });
+
+  it('should use size token (xs = 16px)', () => {
+    fixture.componentRef.setInput('size', 'xs');
+    fixture.detectChanges();
+    expect(component.iconSize()).toBe('16px');
   });
 
   it('should have viewBox attribute', () => {
@@ -72,5 +79,20 @@ describe('Icon', () => {
     fixture.componentRef.setInput('theme', 'primary');
     fixture.detectChanges();
     expect(component.theme()).toBe('primary');
+  });
+
+  it('should update host element size via CSS variable', () => {
+    const hostElement: HTMLElement = fixture.nativeElement;
+    fixture.componentRef.setInput('size', 'lg');
+    fixture.detectChanges();
+    const style = window.getComputedStyle(hostElement);
+    expect(style.getPropertyValue('--vlm-icon-size')).toBe('32px');
+  });
+
+  it('should set fill on SVG element to currentColor', () => {
+    fixture.componentRef.setInput('icon', 'account');
+    fixture.detectChanges();
+    const svgElement = fixture.nativeElement.querySelector('svg');
+    expect(svgElement?.getAttribute('fill')).toBe('currentColor');
   });
 });
