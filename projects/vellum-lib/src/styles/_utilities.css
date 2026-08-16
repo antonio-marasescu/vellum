@@ -1,0 +1,178 @@
+@layer utilities {
+  /* Background utilities */
+  .bg-primary {
+    background-color: var(--vlm-color-primary);
+  }
+  .bg-primary-hover {
+    background-color: var(--vlm-color-primary-hover);
+  }
+  .bg-secondary {
+    background-color: var(--vlm-color-secondary);
+  }
+  .bg-secondary-hover {
+    background-color: var(--vlm-color-secondary-hover);
+  }
+  .bg-error {
+    background-color: var(--vlm-color-error);
+  }
+  .bg-error-hover {
+    background-color: var(--vlm-color-error-hover);
+  }
+  .bg-warning {
+    background-color: var(--vlm-color-warning);
+  }
+  .bg-warning-hover {
+    background-color: var(--vlm-color-warning-hover);
+  }
+  .bg-success {
+    background-color: var(--vlm-color-success);
+  }
+  .bg-success-hover {
+    background-color: var(--vlm-color-success-hover);
+  }
+  .bg-info {
+    background-color: var(--vlm-color-info);
+  }
+  .bg-info-hover {
+    background-color: var(--vlm-color-info-hover);
+  }
+  .bg-surface {
+    background-color: var(--vlm-color-bg-surface);
+  }
+  .bg-surface-hover {
+    background-color: var(--vlm-color-bg-surface-hover);
+  }
+
+  /* Text/foreground color utilities */
+  .text-primary {
+    color: var(--vlm-color-primary-text);
+  }
+  .text-primary-foreground {
+    color: var(--vlm-color-primary-foreground);
+  }
+  .text-secondary {
+    color: var(--vlm-color-secondary-text);
+  }
+  .text-secondary-foreground {
+    color: var(--vlm-color-secondary-foreground);
+  }
+  .text-error {
+    color: var(--vlm-color-error-text);
+  }
+  .text-error-foreground {
+    color: var(--vlm-color-error-foreground);
+  }
+  .text-warning {
+    color: var(--vlm-color-warning-text);
+  }
+  .text-warning-foreground {
+    color: var(--vlm-color-warning-foreground);
+  }
+  .text-success {
+    color: var(--vlm-color-success-text);
+  }
+  .text-success-foreground {
+    color: var(--vlm-color-success-foreground);
+  }
+  .text-info {
+    color: var(--vlm-color-info-text);
+  }
+  .text-info-foreground {
+    color: var(--vlm-color-info-foreground);
+  }
+  .text-muted {
+    color: var(--vlm-color-text-muted);
+  }
+
+  /* Border color utilities */
+  .border-primary {
+    border-color: var(--vlm-color-primary);
+  }
+  .border-primary-hover {
+    border-color: var(--vlm-color-primary-hover);
+  }
+  .border-secondary {
+    border-color: var(--vlm-color-secondary);
+  }
+  .border-secondary-hover {
+    border-color: var(--vlm-color-secondary-hover);
+  }
+  .border-error {
+    border-color: var(--vlm-color-error);
+  }
+  .border-warning {
+    border-color: var(--vlm-color-warning);
+  }
+  .border-success {
+    border-color: var(--vlm-color-success);
+  }
+  .border-info {
+    border-color: var(--vlm-color-info);
+  }
+  .border {
+    border-color: var(--vlm-color-border);
+  }
+
+  /* Outline utilities */
+  .outline-primary {
+    outline-color: var(--vlm-color-primary);
+  }
+  .outline-secondary {
+    outline-color: var(--vlm-color-secondary);
+  }
+  .outline-error {
+    outline-color: var(--vlm-color-error);
+  }
+  .outline-warning {
+    outline-color: var(--vlm-color-warning);
+  }
+  .outline-success {
+    outline-color: var(--vlm-color-success);
+  }
+  .outline-info {
+    outline-color: var(--vlm-color-info);
+  }
+
+  /* Ring utilities (for focus states) */
+  .ring-primary {
+    --tw-ring-color: var(--vlm-color-primary);
+  }
+  .ring-secondary {
+    --tw-ring-color: var(--vlm-color-secondary);
+  }
+  .ring-error {
+    --tw-ring-color: var(--vlm-color-error);
+  }
+  .ring-warning {
+    --tw-ring-color: var(--vlm-color-warning);
+  }
+  .ring-success {
+    --tw-ring-color: var(--vlm-color-success);
+  }
+  .ring-info {
+    --tw-ring-color: var(--vlm-color-info);
+  }
+
+  /* Hover state modifiers - work with Tailwind's hover: prefix */
+  .hover\:bg-primary-hover:hover {
+    background-color: var(--vlm-color-primary-hover);
+  }
+  .hover\:bg-secondary-hover:hover {
+    background-color: var(--vlm-color-secondary-hover);
+  }
+  .hover\:bg-error-hover:hover {
+    background-color: var(--vlm-color-error-hover);
+  }
+  .hover\:bg-warning-hover:hover {
+    background-color: var(--vlm-color-warning-hover);
+  }
+  .hover\:bg-success-hover:hover {
+    background-color: var(--vlm-color-success-hover);
+  }
+  .hover\:bg-info-hover:hover {
+    background-color: var(--vlm-color-info-hover);
+  }
+  .hover\:bg-surface-hover:hover {
+    background-color: var(--vlm-color-bg-surface-hover);
+  }
+}
