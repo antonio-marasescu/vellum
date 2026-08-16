@@ -10,6 +10,7 @@ const config: StorybookConfig = {
       compodoc: false
     }
   },
+  staticDirs: ['../src/assets'],
   async viteFinal(viteConfig) {
     viteConfig.plugins ??= [];
     viteConfig.plugins.push(tailwindcss());

@@ -1,0 +1,38 @@
+import { Canvas, Controls, Meta, Primary } from '@storybook/addon-docs/blocks';
+import * as IconStories from './icon.stories';
+
+<Meta of={IconStories} />
+
+# Icon
+
+A simple icon component that renders SVG icons from the library's icon set.
+
+<Primary />
+
+## Props
+
+<Controls />
+
+## Sizes
+
+Pre-defined size tokens (xs–xxl) or custom pixel values.
+
+<Canvas of={IconStories.Sizes} />
+
+## Custom Size
+
+Pass a number for pixel-perfect sizing.
+
+<Canvas of={IconStories.CustomSize} />
+
+## Themes
+
+Icons support all standard themes plus neutral.
+
+<Canvas of={IconStories.Themes} />
+
+## Gallery
+
+All available icons.
+
+<Canvas of={IconStories.Gallery} />

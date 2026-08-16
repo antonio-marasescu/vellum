@@ -33,6 +33,9 @@ export * from './lib/types/data-display/avatar.types';
 export * from './lib/components/data-display/chip/chip';
 export * from './lib/types/data-display/chip.types';
 
+export * from './lib/components/data-display/icon/icon';
+export * from './lib/types/data-display/icon.types';
+
 // Feedback
 export * from './lib/components/feedback/progress-spinner/progress-spinner';
 export * from './lib/types/feedback/progress-spinner.types';
@@ -58,3 +61,12 @@ export * from './lib/types/actions/dropdown.types';
 export * from './lib/components/navigation/menu/menu-item/menu-item';
 export * from './lib/components/navigation/menu/menu';
 export * from './lib/types/navigation/menu.types';
+
+// Icons
+export * from './lib/icons/icons';
+
+// Utils
+export * from './lib/utils/icons';
+
+// Config
+export * from './lib/config/vellum-config';

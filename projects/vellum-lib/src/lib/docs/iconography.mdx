@@ -1,0 +1,25 @@
+import { Canvas, Meta } from '@storybook/addon-docs/blocks';
+import * as IconographyStories from './iconography.stories';
+
+<Meta of={IconographyStories} />
+
+# Iconography
+
+The library includes 67 carefully crafted icons covering common UI needs. All icons are:
+
+- **Consistent sizing** — Available in 6 preset sizes (xs–xxl) or custom pixel values
+- **Themeable** — Use color variants via the theme prop
+- **Accessible** — Proper ARIA attributes for screen readers
+- **Optimized** — Bundled as code, no HTTP requests
+
+## All Icons
+
+<Canvas of={IconographyStories.AllIcons} />
+
+## Usage
+
+```typescript
+<vlm-icon icon="heart" size="md" theme="primary" />
+```
+
+See the [Icon component documentation](?path=/docs/data-display-icon--docs) for full API details.

@@ -1,11 +1,17 @@
 import type { Meta, StoryObj } from '@storybook/angular-vite';
-import { argsToTemplate } from '@storybook/angular-vite';
+import { argsToTemplate, moduleMetadata } from '@storybook/angular-vite';
 import { fn } from 'storybook/test';
 import { SwapButton } from './swap-button';
+import { Icon } from '../../data-display/icon/icon';
 
 const meta: Meta<SwapButton> = {
   title: 'Actions/Swap Button',
   component: SwapButton,
+  decorators: [
+    moduleMetadata({
+      imports: [Icon]
+    })
+  ],
   argTypes: {
     size: { control: 'select', options: ['xs', 'sm', 'md', 'lg', 'xl', 'xxl'] },
     clicked: { action: 'clicked' }
@@ -20,8 +26,8 @@ const meta: Meta<SwapButton> = {
     props: args,
     template: `
       <vlm-swap-button ${argsToTemplate(args)}>
-        <span swapOff>☀️</span>
-        <span swapOn>🌙</span>
+        <vlm-icon swapOff icon="sun" size="lg"></vlm-icon>
+        <vlm-icon swapOn icon="moon" size="lg"></vlm-icon>
       </vlm-swap-button>
     `
   })
@@ -38,28 +44,28 @@ export const Sizes: Story = {
     template: `
       <div style="display: flex; gap: 12px; align-items: center;">
         <vlm-swap-button ${argsToTemplate(args, { exclude: ['size'] })} size="xs">
-          <span swapOff>☀️</span>
-          <span swapOn>🌙</span>
+          <vlm-icon swapOff icon="sun" size="xs"></vlm-icon>
+          <vlm-icon swapOn icon="moon" size="xs"></vlm-icon>
         </vlm-swap-button>
         <vlm-swap-button ${argsToTemplate(args, { exclude: ['size'] })} size="sm">
-          <span swapOff>☀️</span>
-          <span swapOn>🌙</span>
+          <vlm-icon swapOff icon="sun" size="sm"></vlm-icon>
+          <vlm-icon swapOn icon="moon" size="sm"></vlm-icon>
         </vlm-swap-button>
         <vlm-swap-button ${argsToTemplate(args, { exclude: ['size'] })} size="md">
-          <span swapOff>☀️</span>
-          <span swapOn>🌙</span>
+          <vlm-icon swapOff icon="sun" size="md"></vlm-icon>
+          <vlm-icon swapOn icon="moon" size="md"></vlm-icon>
         </vlm-swap-button>
         <vlm-swap-button ${argsToTemplate(args, { exclude: ['size'] })} size="lg">
-          <span swapOff>☀️</span>
-          <span swapOn>🌙</span>
+          <vlm-icon swapOff icon="sun" size="lg"></vlm-icon>
+          <vlm-icon swapOn icon="moon" size="lg"></vlm-icon>
         </vlm-swap-button>
         <vlm-swap-button ${argsToTemplate(args, { exclude: ['size'] })} size="xl">
-          <span swapOff>☀️</span>
-          <span swapOn>🌙</span>
+          <vlm-icon swapOff icon="sun" size="xl"></vlm-icon>
+          <vlm-icon swapOn icon="moon" size="xl"></vlm-icon>
         </vlm-swap-button>
         <vlm-swap-button ${argsToTemplate(args, { exclude: ['size'] })} size="xxl">
-          <span swapOff>☀️</span>
-          <span swapOn>🌙</span>
+          <vlm-icon swapOff icon="sun" size="xxl"></vlm-icon>
+          <vlm-icon swapOn icon="moon" size="xxl"></vlm-icon>
         </vlm-swap-button>
       </div>
     `

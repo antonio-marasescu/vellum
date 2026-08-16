@@ -1,0 +1,36 @@
+:root {
+  --vlm-icon-size-xs: 16px;
+  --vlm-icon-size-sm: 18px;
+  --vlm-icon-size-md: 20px;
+  --vlm-icon-size-lg: 24px;
+  --vlm-icon-size-xl: 28px;
+  --vlm-icon-size-xxl: 32px;
+}
+
+:host([data-theme='primary']) {
+  color: var(--vlm-color-primary-text);
+}
+
+:host([data-theme='secondary']) {
+  color: var(--vlm-color-secondary-text);
+}
+
+:host([data-theme='info']) {
+  color: var(--vlm-color-info-text);
+}
+
+:host([data-theme='success']) {
+  color: var(--vlm-color-success-text);
+}
+
+:host([data-theme='warning']) {
+  color: var(--vlm-color-warning-text);
+}
+
+:host([data-theme='error']) {
+  color: var(--vlm-color-error-text);
+}
+
+:host([data-theme='neutral']) {
+  color: var(--vlm-color-text);
+}
