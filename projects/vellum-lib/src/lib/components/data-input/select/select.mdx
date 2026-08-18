@@ -1,4 +1,4 @@
-import {Canvas, Controls, Meta, Primary, Stories} from '@storybook/addon-docs/blocks';
+import { Canvas, Controls, Meta, Primary, Stories } from '@storybook/addon-docs/blocks';
 import * as SelectStories from './select.stories';
 
 <Meta of={SelectStories} />
@@ -48,6 +48,41 @@ Error text is only shown once the field is both `touched` and has `errors` —
 matching how a bound signal-forms field reports state.
 
 <Canvas of={SelectStories.Invalid} />
+
+## Theming
+
+All visual aspects are controlled by CSS custom properties.
+
+### Base Tokens
+
+| Token                              | Description                  | Default |
+| ---------------------------------- | ---------------------------- | ------- |
+| `--vlm-select-radius`              | Border radius                | `6px`   |
+| `--vlm-select-font-weight`         | Font weight                  | `400`   |
+| `--vlm-select-transition-duration` | Transition duration          | `150ms` |
+| `--vlm-select-disabled-opacity`    | Opacity when disabled        | `0.5`   |
+| `--vlm-select-focus-ring-width`    | Focus ring width             | `2px`   |
+| `--vlm-select-gap`                 | Gap between label and select | `6px`   |
+
+### Color Tokens
+
+| Token                                | Description                          |
+| ------------------------------------ | ------------------------------------ |
+| `--vlm-select-color`                 | Select text color                    |
+| `--vlm-select-basic-bg`              | Background for basic variant         |
+| `--vlm-select-outlined-bg`           | Background for outlined variant      |
+| `--vlm-select-outlined-border-color` | Border color for outlined variant    |
+| `--vlm-select-primary-color`         | Focus color (primary theme)          |
+| `--vlm-select-secondary-color`       | Focus color (secondary theme)        |
+| `--vlm-select-error-color`           | Border/focus color when invalid      |
+| `--vlm-select-chevron-color`         | Dropdown chevron color               |
+| `--vlm-select-chevron-size`          | Chevron icon size                    |
+| `--vlm-select-chevron-inset`         | Chevron right offset                 |
+| `--vlm-select-chevron-padding`       | Right padding to accommodate chevron |
+
+### Size Tokens
+
+Each size (xs, sm, md, lg, xl) has tokens for padding and font size.
 
 ## All stories
 

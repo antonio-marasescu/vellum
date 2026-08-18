@@ -1,0 +1,178 @@
+import { Meta } from '@storybook/addon-docs/blocks';
+
+<Meta title="Theming & Dark Mode" />
+
+# Theming & Dark Mode
+
+Vellum's theming system is built on CSS custom properties, making it easy to customize and switch between light and dark modes at runtime.
+
+## How It Works
+
+Every visual aspect of Vellum components — colors, spacing, typography, shadows — is controlled by CSS custom properties with the `--vlm-*` prefix.
+
+- **Global tokens** — Shared values like `--vlm-color-brand`, `--vlm-font-family-sans`
+- **Component tokens** — Component-specific values like `--vlm-button-primary-bg`, `--vlm-input-border`
+
+Light and dark themes are implemented by overriding these tokens under a `[data-theme]` attribute selector.
+
+## Switching Themes
+
+### At Build Time
+
+Set the default theme on your root HTML element:
+
+```html
+<!-- Default to dark theme -->
+<html data-theme="dark">
+  <body>
+    <app-root></app-root>
+  </body>
+</html>
+```
+
+If no `data-theme` attribute is present, light theme is used.
+
+### At Runtime
+
+Toggle the theme by changing the `data-theme` attribute:
+
+```typescript
+import { Component, signal } from '@angular/core';
+import { VlmButtonComponent } from 'vellum-lib';
+
+@Component({
+  selector: 'app-theme-switcher',
+  standalone: true,
+  imports: [VlmButtonComponent],
+  template: `
+    <vlm-button (click)="toggleTheme()">
+      {{ theme() === 'dark' ? '☀️ Light' : '🌙 Dark' }}
+    </vlm-button>
+  `
+})
+export class ThemeSwitcherComponent {
+  theme = signal<'light' | 'dark'>('light');
+
+  toggleTheme() {
+    const newTheme = this.theme() === 'dark' ? 'light' : 'dark';
+    this.theme.set(newTheme);
+    document.documentElement.setAttribute('data-theme', newTheme);
+  }
+}
+```
+
+You can also apply the theme to a specific subtree instead of the whole document:
+
+```html
+<div data-theme="dark">
+  <!-- Only components inside this div will use dark theme -->
+  <vlm-button>I'm dark</vlm-button>
+</div>
+```
+
+## Customizing Colors
+
+Override global color tokens to match your brand:
+
+```css
+:root {
+  /* Brand colors */
+  --vlm-color-brand: oklch(0.55 0.2 270); /* Purple */
+  --vlm-color-brand-hover: oklch(0.5 0.2 270);
+  --vlm-color-brand-foreground: oklch(1 0 0); /* White */
+
+  /* Semantic colors */
+  --vlm-color-success: oklch(0.6 0.15 145);
+  --vlm-color-error: oklch(0.55 0.2 25);
+  --vlm-color-warning: oklch(0.7 0.15 85);
+}
+
+[data-theme='dark'] {
+  --vlm-color-brand: oklch(0.65 0.2 270);
+  --vlm-color-brand-hover: oklch(0.7 0.2 270);
+}
+```
+
+Vellum uses `oklch()` color format for perceptually uniform colors across light and dark themes.
+
+## Customizing Typography
+
+Override font tokens to use your own typeface:
+
+```css
+:root {
+  --vlm-font-family-sans: 'Inter', system-ui, sans-serif;
+  --vlm-font-size-base: 1rem;
+  --vlm-font-size-sm: 0.875rem;
+  --vlm-font-size-lg: 1.125rem;
+}
+```
+
+Make sure to load the font via `@font-face` or a `<link>` tag.
+
+## Customizing Individual Components
+
+Each component exposes its own set of tokens. For example, to customize buttons:
+
+```css
+:root {
+  /* Button tokens */
+  --vlm-button-primary-bg: var(--vlm-color-brand);
+  --vlm-button-primary-bg-hover: var(--vlm-color-brand-hover);
+  --vlm-button-primary-foreground: var(--vlm-color-brand-foreground);
+  --vlm-button-border-radius: 0.5rem;
+  --vlm-button-padding-x: 1.5rem;
+  --vlm-button-padding-y: 0.75rem;
+}
+```
+
+See individual component documentation pages for the full list of available tokens.
+
+## Scoped Customization
+
+Override tokens for specific instances:
+
+```html
+<vlm-button style="--vlm-button-primary-bg: oklch(0.6 0.2 145);"> Custom Green Button </vlm-button>
+```
+
+Or use a CSS class:
+
+```css
+.success-button {
+  --vlm-button-primary-bg: var(--vlm-color-success);
+  --vlm-button-primary-bg-hover: var(--vlm-color-success-hover);
+}
+```
+
+```html
+<vlm-button class="success-button">Success</vlm-button>
+```
+
+## Advanced: Importing Theme Files Separately
+
+If you want more control, you can import theme CSS files individually:
+
+```css
+/* Import base styles without any theme */
+@import 'vellum-lib/styles/index.css';
+
+/* Conditionally import themes based on your app's logic */
+@import 'vellum-lib/styles/themes/light.css';
+@import 'vellum-lib/styles/themes/dark.css';
+```
+
+This is typically not needed — the default `index.css` includes both themes.
+
+## Color Reference
+
+See the component docs for detailed token tables. Common global color tokens include:
+
+- `--vlm-color-brand` / `--vlm-color-brand-hover` / `--vlm-color-brand-foreground`
+- `--vlm-color-success` / `--vlm-color-success-hover` / `--vlm-color-success-foreground`
+- `--vlm-color-error` / `--vlm-color-error-hover` / `--vlm-color-error-foreground`
+- `--vlm-color-warning` / `--vlm-color-warning-hover` / `--vlm-color-warning-foreground`
+- `--vlm-color-neutral-surface` / `--vlm-color-neutral-surface-hover`
+- `--vlm-color-border` / `--vlm-color-text` / `--vlm-color-text-muted`
+
+All colors use `oklch()` format for consistent lightness perception across themes.

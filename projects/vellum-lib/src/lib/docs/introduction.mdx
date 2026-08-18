@@ -1,0 +1,44 @@
+import { Meta } from '@storybook/addon-docs/blocks';
+
+<Meta title="Introduction" />
+
+# Welcome to Vellum
+
+Vellum is a personal Angular component library built for Angular 22+ with accessible, themeable components and **no runtime styling dependencies**.
+
+## Philosophy
+
+- **No build toolchain required** — Consumers import compiled CSS, never configure Tailwind or any other styling tool
+- **Accessible by default** — Components follow ARIA best practices and are tested with automated a11y checks
+- **Themeable** — Light and dark themes ship out of the box, switchable at runtime
+- **Customizable** — Every visual aspect is controlled by CSS custom properties (`--vlm-*` tokens)
+- **Modern Angular** — Standalone components, signals, and Angular 22+ features
+
+## What's Inside
+
+Vellum provides a growing collection of components covering common UI patterns:
+
+- **Actions** — Buttons, dropdowns, toggles
+- **Forms** — Inputs, checkboxes, radio groups, selects
+- **Navigation** — Menus, tabs
+- **Feedback** — Chips, badges
+- **Display** — Icons, typography
+- **And more...**
+
+## Design Principles
+
+1. **Behavior from CDK, styling from tokens** — We use `@angular/cdk` for behavior primitives (a11y, overlay, focus management) but never for styling. All visual aspects come from CSS custom properties.
+
+2. **No third-party UI libraries** — Every component is built in-house to maintain full control over behavior, styling, and bundle size.
+
+3. **Single compiled CSS layer** — No Sass mixins, no Tailwind config for consumers. One CSS import, done.
+
+4. **Conventions over configuration** — Sensible defaults out of the box, customization via CSS variables when needed.
+
+## Getting Started
+
+Ready to use Vellum in your project? Check out the [Getting Started](/?path=/docs/getting-started--docs) guide.
+
+Want to understand theming? See [Theming & Dark Mode](/?path=/docs/theming--docs).
+
+Browse components in the sidebar to see examples and usage patterns.

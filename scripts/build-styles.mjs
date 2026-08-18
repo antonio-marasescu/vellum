@@ -18,20 +18,14 @@ async function buildCss(inputPath, outputPath) {
   writeFileSync(outputPath, css);
 }
 
-await buildCss(
-  join(libSrcDir, 'styles/index.css'),
-  join(distDir, 'styles/index.css')
-);
+await buildCss(join(libSrcDir, 'styles/index.css'), join(distDir, 'styles/index.css'));
 
 await buildCss(
   join(libSrcDir, 'styles/themes/light.css'),
   join(distDir, 'styles/themes/light.css')
 );
 
-await buildCss(
-  join(libSrcDir, 'styles/themes/dark.css'),
-  join(distDir, 'styles/themes/dark.css')
-);
+await buildCss(join(libSrcDir, 'styles/themes/dark.css'), join(distDir, 'styles/themes/dark.css'));
 
 cpSync(join(libSrcDir, 'assets'), join(distDir, 'assets'), { recursive: true });
 

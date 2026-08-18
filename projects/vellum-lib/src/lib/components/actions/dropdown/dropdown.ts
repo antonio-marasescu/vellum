@@ -3,13 +3,13 @@ import { TemplatePortal } from '@angular/cdk/portal';
 import {
   Component,
   ElementRef,
-  OnDestroy,
-  TemplateRef,
-  ViewChild,
-  ViewContainerRef,
   inject,
   input,
-  output
+  type OnDestroy,
+  output,
+  TemplateRef,
+  ViewChild,
+  ViewContainerRef
 } from '@angular/core';
 import type { ButtonSize, ButtonTheme, ButtonVariant } from '../../../types/actions/button.types';
 import type { DropdownItem } from '../../../types/actions/dropdown.types';

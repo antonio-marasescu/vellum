@@ -49,3 +49,28 @@ An expansion panel component that toggles content visibility. Similar to an acco
 - Provides `aria-expanded` to indicate expansion state
 - Supports keyboard interaction (Enter/Space) to toggle
 - Links header and body via `aria-controls` when an `id` is provided
+
+## Theming
+
+All visual aspects are controlled by CSS custom properties.
+
+### Base Tokens
+
+| Token                             | Description           | Default                          |
+| --------------------------------- | --------------------- | -------------------------------- |
+| `--vlm-panel-radius`              | Border radius         | `8px`                            |
+| `--vlm-panel-header-font-weight`  | Header font weight    | `600`                            |
+| `--vlm-panel-transition-duration` | Transition duration   | `200ms`                          |
+| `--vlm-panel-disabled-opacity`    | Opacity when disabled | `0.5`                            |
+| `--vlm-panel-bg`                  | Background color      | Inherits from `--vlm-color-bg`   |
+| `--vlm-panel-color`               | Text color            | Inherits from `--vlm-color-text` |
+
+### Theme Border Tokens
+
+For each theme (`primary`, `secondary`, `info`, `success`, `warning`, `neutral`):
+
+- `--vlm-panel-{theme}-border` — Left border color
+
+### Size Tokens
+
+Each size (xs, sm, md, lg, xl, xxl) has tokens for padding, font size, gap, and chevron size.

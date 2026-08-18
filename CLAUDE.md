@@ -4,7 +4,7 @@ Personal Angular component library, published to npm as `vellum-lib`. **No third
 or styling library is shipped to consumers.** The only runtime dependency allowed beyond
 `@angular/*` is `@angular/cdk` — framework-agnostic behavior primitives (a11y, overlay,
 focus trap, layout) — for behavior only, never for styling. Tailwind CSS is used to
-*author* component styles, but it's a devDependency/build-time tool only (same status
+_author_ component styles, but it's a devDependency/build-time tool only (same status
 `sass` used to have) — it's never a runtime dependency, and consumers never install or
 configure it themselves.
 

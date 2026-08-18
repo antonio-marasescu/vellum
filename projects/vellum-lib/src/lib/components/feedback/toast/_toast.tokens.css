@@ -11,7 +11,7 @@
 
   --vlm-toast-remove-size: 20px;
   --vlm-toast-remove-icon-size: 9px;
-  --vlm-toast-remove-hover-bg: color-mix(in oklch, currentColor 18%, transparent);
+  --vlm-toast-remove-hover-bg: color-mix(in oklch, currentcolor 18%, transparent);
 
   --vlm-toast-outlined-bg: var(--vlm-color-bg);
 

@@ -8,6 +8,7 @@
   "trailingComma": "none",
   "bracketSpacing": true,
   "arrowParens": "avoid",
+  "plugins": ["prettier-plugin-tailwindcss"],
   "overrides": [
     {
       "files": "*.html",

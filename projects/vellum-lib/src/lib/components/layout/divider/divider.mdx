@@ -40,6 +40,18 @@ Adds a leading margin so the line starts indented instead of spanning edge-to-ed
 
 <Canvas of={DividerStories.CustomWidth} />
 
+## Theming
+
+All visual aspects are controlled by CSS custom properties.
+
+| Token                           | Description                           | Default                                    |
+| ------------------------------- | ------------------------------------- | ------------------------------------------ |
+| `--vlm-divider-width`           | Divider thickness                     | `1px`                                      |
+| `--vlm-divider-inset-size`      | Inset from edges when `inset` is true | `16px`                                     |
+| `--vlm-divider-neutral-color`   | Color for neutral theme               | Inherits from `--vlm-color-border`         |
+| `--vlm-divider-primary-color`   | Color for primary theme               | Inherits from `--vlm-color-primary`        |
+| `--vlm-divider-secondary-color` | Color for secondary theme             | Inherits from `--vlm-color-secondary-text` |
+
 ## All stories
 
 <Stories />

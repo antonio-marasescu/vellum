@@ -1,4 +1,4 @@
-import {Canvas, Controls, Meta, Primary, Stories} from '@storybook/addon-docs/blocks';
+import { Canvas, Controls, Meta, Primary, Stories } from '@storybook/addon-docs/blocks';
 import * as MenuStories from './menu.stories';
 
 <Meta of={MenuStories} />
@@ -61,6 +61,14 @@ Nesting isn't limited to one level — each `menuItems` submenu shifts further r
 ## Disabled
 
 <Canvas of={MenuStories.Disabled} />
+
+## Theming
+
+Menu-level tokens control layout. Individual menu items inherit their styling from the menu-item component tokens.
+
+| Token            | Description            | Default |
+| ---------------- | ---------------------- | ------- |
+| `--vlm-menu-gap` | Gap between menu items | `2px`   |
 
 ## All stories
 

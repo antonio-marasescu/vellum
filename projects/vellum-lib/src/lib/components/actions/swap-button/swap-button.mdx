@@ -1,4 +1,4 @@
-import {Canvas, Controls, Meta, Primary, Stories} from '@storybook/addon-docs/blocks';
+import { Canvas, Controls, Meta, Primary, Stories } from '@storybook/addon-docs/blocks';
 import * as SwapButtonStories from './swap-button.stories';
 
 <Meta of={SwapButtonStories} />
@@ -31,6 +31,26 @@ attribute for a light/dark toggle).
 ## Disabled
 
 <Canvas of={SwapButtonStories.Disabled} />
+
+## Theming
+
+All visual aspects are controlled by CSS custom properties.
+
+### Base Tokens
+
+| Token                                   | Description              | Default                                      |
+| --------------------------------------- | ------------------------ | -------------------------------------------- |
+| `--vlm-swap-button-radius`              | Border radius (circular) | `50%`                                        |
+| `--vlm-swap-button-transition-duration` | Transition duration      | `150ms`                                      |
+| `--vlm-swap-button-disabled-opacity`    | Opacity when disabled    | `0.5`                                        |
+| `--vlm-swap-button-inactive-scale`      | Scale of inactive icon   | `0.6`                                        |
+| `--vlm-swap-button-bg`                  | Background color         | `transparent`                                |
+| `--vlm-swap-button-bg-hover`            | Background on hover      | Inherits from `--vlm-color-bg-surface-hover` |
+| `--vlm-swap-button-color`               | Icon color               | Inherits from `--vlm-color-text`             |
+
+### Size Tokens
+
+Each size (xs, sm, md, lg, xl, xxl) has tokens for diameter and icon size.
 
 ## All stories
 

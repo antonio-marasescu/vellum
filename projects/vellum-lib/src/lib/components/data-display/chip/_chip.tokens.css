@@ -5,7 +5,7 @@
   --vlm-chip-disabled-opacity: 0.5;
   --vlm-chip-remove-size: 18px;
   --vlm-chip-remove-icon-size: 8px;
-  --vlm-chip-remove-hover-bg: color-mix(in oklch, currentColor 18%, transparent);
+  --vlm-chip-remove-hover-bg: color-mix(in oklch, currentcolor 18%, transparent);
 
   --vlm-chip-primary-bg: var(--vlm-color-primary);
   --vlm-chip-primary-bg-hover: var(--vlm-color-primary-hover);

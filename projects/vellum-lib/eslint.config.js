@@ -2,31 +2,6 @@
 const { defineConfig } = require('eslint/config');
 const rootConfig = require('../../eslint.config.js');
 
-module.exports = defineConfig([
-  ...rootConfig,
-  {
-    files: ['**/*.ts'],
-    rules: {
-      '@angular-eslint/directive-selector': [
-        'error',
-        {
-          type: 'attribute',
-          prefix: 'vlm',
-          style: 'camelCase',
-        },
-      ],
-      '@angular-eslint/component-selector': [
-        'error',
-        {
-          type: 'element',
-          prefix: 'vlm',
-          style: 'kebab-case',
-        },
-      ],
-    },
-  },
-  {
-    files: ['**/*.html'],
-    rules: {},
-  },
-]);
+// The library extends the root config directly.
+// Selector rules are already defined in the root config.
+module.exports = defineConfig([...rootConfig]);

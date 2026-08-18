@@ -41,6 +41,26 @@ hover ring, and emits `clicked` when pressed.
 
 <Canvas of={AvatarStories.Clickable} />
 
+## Theming
+
+All visual aspects are controlled by CSS custom properties.
+
+### Base Tokens
+
+| Token                               | Description                     | Default                                          |
+| ----------------------------------- | ------------------------------- | ------------------------------------------------ |
+| `--vlm-avatar-radius`               | Border radius                   | `8px`                                            |
+| `--vlm-avatar-font-weight`          | Font weight for initials        | `600`                                            |
+| `--vlm-avatar-transition-duration`  | Transition duration             | `150ms`                                          |
+| `--vlm-avatar-bg`                   | Background color                | Inherits from `--vlm-color-secondary`            |
+| `--vlm-avatar-fg`                   | Text/initials color             | Inherits from `--vlm-color-secondary-foreground` |
+| `--vlm-avatar-clickable-ring-width` | Focus ring width when clickable | `2px`                                            |
+| `--vlm-avatar-clickable-ring-color` | Focus ring color                | Inherits from `--vlm-color-primary`              |
+
+### Size Tokens
+
+Each size (xs, sm, md, lg, xl, xxl) has tokens for diameter and font size.
+
 ## All stories
 
 <Stories />

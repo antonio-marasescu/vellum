@@ -1,5 +1,5 @@
 import { Component, computed, inject, input } from '@angular/core';
-import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
+import { DomSanitizer, type SafeHtml } from '@angular/platform-browser';
 import type { IconName } from '../../../utils/icons';
 import type { IconSize, IconTheme } from '../../../types/data-display/icon.types';
 import { ICON_MAP } from '../../../icons/icons';
@@ -77,8 +77,10 @@ export class Icon {
 
     // Process inner elements: replace existing colors and keep fill="none"
     content = content
-      .replace(/fill="(?!none)[^"]*"/g, 'fill="currentColor"')
-      .replace(/stroke="(?!none)[^"]*"/g, 'stroke="currentColor"');
+      ? content
+          .replace(/fill="(?!none)[^"]*"/g, 'fill="currentColor"')
+          .replace(/stroke="(?!none)[^"]*"/g, 'stroke="currentColor"')
+      : '';
 
     return {
       viewBox,
@@ -88,7 +90,7 @@ export class Icon {
       strokeLinecap,
       strokeLinejoin,
       content: this.sanitizer.bypassSecurityTrustHtml(content)
-    };
+    } as ParsedIcon;
   });
 
   iconSize = computed(() => {

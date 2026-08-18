@@ -42,6 +42,26 @@ Set `mode` to `determinate` and drive `value` (0–100) yourself; the arc no lon
 
 <Canvas of={ProgressSpinnerStories.CustomSize} />
 
+## Theming
+
+All visual aspects are controlled by CSS custom properties.
+
+### Base Tokens
+
+| Token                                          | Description                       | Default                            |
+| ---------------------------------------------- | --------------------------------- | ---------------------------------- |
+| `--vlm-progress-spinner-track-color`           | Track/background circle color     | Inherits from `--vlm-color-border` |
+| `--vlm-progress-spinner-transition-duration`   | Transition duration               | `200ms`                            |
+| `--vlm-progress-spinner-rotate-duration`       | Outer rotation animation duration | `1s`                               |
+| `--vlm-progress-spinner-clip-duration`         | Clip path animation duration      | `2s`                               |
+| `--vlm-progress-spinner-inner-rotate-duration` | Inner rotation duration           | `0.5s`                             |
+
+### Theme Color Tokens
+
+For each theme (`primary`, `secondary`, `info`, `success`, `warning`):
+
+- `--vlm-progress-spinner-{theme}-color` — Spinner color
+
 ## All stories
 
 <Stories />

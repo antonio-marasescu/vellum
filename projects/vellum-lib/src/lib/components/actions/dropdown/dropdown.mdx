@@ -1,4 +1,4 @@
-import {Canvas, Controls, Meta, Primary, Stories} from '@storybook/addon-docs/blocks';
+import { Canvas, Controls, Meta, Primary, Stories } from '@storybook/addon-docs/blocks';
 import * as DropdownStories from './dropdown.stories';
 
 <Meta of={DropdownStories} />
@@ -27,6 +27,24 @@ the trigger is a `vlm-button`.
 ## Disabled
 
 <Canvas of={DropdownStories.Disabled} />
+
+## Theming
+
+All visual aspects are controlled by CSS custom properties scoped to `.vlm-dropdown__panel` (not `:host`, since the panel is portaled to the overlay container).
+
+| Token                                | Description             | Default                                      |
+| ------------------------------------ | ----------------------- | -------------------------------------------- |
+| `--vlm-dropdown-radius`              | Border radius           | `6px`                                        |
+| `--vlm-dropdown-panel-min-width`     | Minimum panel width     | `160px`                                      |
+| `--vlm-dropdown-panel-padding-block` | Panel vertical padding  | `4px`                                        |
+| `--vlm-dropdown-item-padding-block`  | Item vertical padding   | `8px`                                        |
+| `--vlm-dropdown-item-padding-inline` | Item horizontal padding | `12px`                                       |
+| `--vlm-dropdown-item-font-size`      | Item font size          | `14px`                                       |
+| `--vlm-dropdown-panel-bg`            | Panel background        | Inherits from `--vlm-color-bg`               |
+| `--vlm-dropdown-panel-color`         | Panel text color        | Inherits from `--vlm-color-text`             |
+| `--vlm-dropdown-panel-border-color`  | Panel border color      | Inherits from `--vlm-color-border`           |
+| `--vlm-dropdown-panel-shadow`        | Panel shadow            | `0 4px 12px color-mix(...)`                  |
+| `--vlm-dropdown-item-hover-bg`       | Item hover background   | Inherits from `--vlm-color-bg-surface-hover` |
 
 ## All stories
 

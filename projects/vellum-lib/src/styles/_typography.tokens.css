@@ -1,9 +1,9 @@
 :root {
   --vlm-font-family-sans:
-    'Geist Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial,
+    'Geist Sans', -apple-system, blinkmacsystemfont, 'Segoe UI', roboto, helvetica, arial,
     sans-serif;
   --vlm-font-family-mono:
-    ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace;
+    ui-monospace, sfmono-regular, 'SF Mono', menlo, consolas, 'Liberation Mono', monospace;
 
   --vlm-font-size-xs: 12px;
   --vlm-font-size-sm: 13px;

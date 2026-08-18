@@ -40,6 +40,36 @@ Setting `removable` renders an "x" that emits `removed` when pressed.
 
 <Canvas of={ToastStories.Disabled} />
 
+## Theming
+
+All visual aspects are controlled by CSS custom properties.
+
+### Base Tokens
+
+| Token                          | Description                     | Default                                              |
+| ------------------------------ | ------------------------------- | ---------------------------------------------------- |
+| `--vlm-toast-radius`           | Border radius                   | `8px`                                                |
+| `--vlm-toast-font-weight`      | Font weight                     | `500`                                                |
+| `--vlm-toast-font-size`        | Font size                       | `14px`                                               |
+| `--vlm-toast-line-height`      | Line height                     | `1.4`                                                |
+| `--vlm-toast-gap`              | Gap between elements            | `12px`                                               |
+| `--vlm-toast-padding-block`    | Vertical padding                | `10px`                                               |
+| `--vlm-toast-padding-inline`   | Horizontal padding              | `14px`                                               |
+| `--vlm-toast-disabled-opacity` | Opacity when disabled           | `0.5`                                                |
+| `--vlm-toast-shadow`           | Box shadow                      | `0 2px 8px color-mix(...)`                           |
+| `--vlm-toast-remove-size`      | Remove button size              | `20px`                                               |
+| `--vlm-toast-remove-icon-size` | Remove icon size                | `9px`                                                |
+| `--vlm-toast-remove-hover-bg`  | Remove button hover background  | `color-mix(in oklch, currentColor 18%, transparent)` |
+| `--vlm-toast-outlined-bg`      | Background for outlined variant | Inherits from `--vlm-color-bg`                       |
+
+### Theme Color Tokens
+
+For each theme (`primary`, `secondary`, `info`, `success`, `warning`):
+
+- `--vlm-toast-{theme}-bg` — Background color (filled variant)
+- `--vlm-toast-{theme}-fg` — Text color (filled variant)
+- `--vlm-toast-{theme}-color` — Border/text color (outlined variant)
+
 ## All stories
 
 <Stories />

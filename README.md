@@ -1,59 +1,124 @@
 # Vellum
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 21.2.2.
+A personal Angular component library with accessible and customizable UI signal-first components for Angular.
 
-## Development server
+## Project Structure
 
-To start a local development server, run:
+This is a monorepo containing:
 
-```bash
-ng serve
-```
+- **`projects/vellum-lib/`** — The published component library
+- **`.storybook/`** — Component documentation and visual development environment
+- **`scripts/`** — Build tooling for compiling styles and assets
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+## Installation & Usage
 
-## Code scaffolding
+See the [library README](projects/vellum-lib/README.md) for installation instructions and usage examples.
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+For the full component catalog and interactive examples, see the [Storybook documentation](https://github.com/marasa/vellum#storybook).
 
-```bash
-ng generate component component-name
-```
+## Development
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+### Prerequisites
 
-```bash
-ng generate --help
-```
+- Node.js 20+
+- pnpm 10+
 
-## Building
-
-To build the project run:
+### Setup
 
 ```bash
-ng build
+# Install dependencies
+pnpm install
+
+# Start Storybook for component development
+pnpm storybook
+
+# Build the library
+pnpm build
+
+# Run tests
+pnpm test
+pnpm test:stories
+
+# Type check
+pnpm typecheck
+
+# Lint and format
+pnpm lint
+pnpm format
 ```
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+### Component Development Workflow
 
-## Running unit tests
+1. **Create component files** — Every component follows a fixed 6-file anatomy:
+   - `<name>.ts` — Component class
+   - `<name>.html` — Template
+   - `_<name>.tokens.css` — CSS custom properties
+   - `<name>.spec.ts` — Unit tests
+   - `<name>.stories.ts` — Storybook stories
+   - `<name>.mdx` — Component documentation
 
-To execute unit tests with the [Vitest](https://vitest.dev/) test runner, use the following command:
+2. **Style with tokens** — Use Tailwind utility classes in templates with arbitrary-value syntax referencing `--vlm-*` tokens:
+
+   ```html
+   <button class="bg-[var(--vlm-button-primary-bg)]">Click me</button>
+   ```
+
+3. **Export from public API** — Add the component to `projects/vellum-lib/src/public-api.ts`
+
+4. **Document in Storybook** — Write stories and MDX documentation showing all variants, states, and customization options
+
+5. **Test** — Write unit tests and ensure a11y checks pass in Storybook
+
+### Theming
+
+- Global tokens: `projects/vellum-lib/src/styles/_colors.tokens.css`, `_typography.tokens.css`
+- Theme variants: `styles/dark.css` overrides color tokens under `[data-theme="dark"]`
+- Component tokens: Each component's `_<name>.tokens.css` defines its own `--vlm-<name>-*` tokens
+
+### Package Verification
+
+After building, verify the package artifact:
 
 ```bash
-ng test
+pnpm build
+pnpm verify:package
 ```
 
-## Running end-to-end tests
+This runs `publint` to check for common packaging issues.
 
-For end-to-end (e2e) testing, run:
+## Scripts
 
-```bash
-ng e2e
-```
+- `pnpm start` — Start development server (currently no app, use Storybook)
+- `pnpm build` — Build the library (runs ng-packagr + style compilation)
+- `pnpm test` — Run unit tests
+- `pnpm test:stories` — Run Storybook a11y tests
+- `pnpm test:coverage` — Run tests with coverage
+- `pnpm typecheck` — Type check without emitting
+- `pnpm lint` — Lint TypeScript and HTML
+- `pnpm format` — Format code with Prettier
+- `pnpm format:check` — Check formatting without modifying files
+- `pnpm storybook` — Start Storybook dev server
+- `pnpm build-storybook` — Build static Storybook
+- `pnpm verify:package` — Verify built package with publint
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
+## Architecture
 
-## Additional Resources
+### No Runtime Styling Dependencies
 
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+Tailwind CSS is a **devDependency** and build-time tool only. It compiles to a single `dist/vellum-lib/styles/index.css` file that consumers import — they never install Tailwind, configure `tailwind.config.js`, or run PostCSS themselves.
+
+The only allowed runtime dependency beyond `@angular/*` is `@angular/cdk` for behavior primitives (a11y, overlay, focus management).
+
+### Component Conventions
+
+- Selector prefix: `vlm`
+- No `any` types (enforced by ESLint)
+- Use `type` aliases, not `interface` for object shapes
+- Prefer signals over RxJS where Angular supports it
+- All input/output/model types live in `projects/vellum-lib/src/lib/types/<name>.types.ts`
+
+## License
+
+MIT © Antonio Marasescu-Duran
+
+See [LICENSE](LICENSE) for details.

@@ -22,19 +22,6 @@
     ]
   },
   "hooks": {
-    "PostToolUse": [
-      {
-        "matcher": "Edit|Write|MultiEdit",
-        "hooks": [
-          {
-            "type": "command",
-            "command": "pnpm run format >/dev/null 2>&1; pnpm run lint 2>&1 | tail -n 40",
-            "timeout": 90,
-            "statusMessage": "Running lint and format..."
-          }
-        ]
-      }
-    ],
     "PreToolUse": [
       {
         "matcher": "Bash",

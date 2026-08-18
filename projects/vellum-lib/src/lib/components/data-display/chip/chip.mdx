@@ -52,6 +52,34 @@ The remove button is unaffected and still works when `removable` is `true`.
 
 <Canvas of={ChipStories.NotClickable} />
 
+## Theming
+
+All visual aspects are controlled by CSS custom properties.
+
+### Base Tokens
+
+| Token                            | Description                    | Default                                              |
+| -------------------------------- | ------------------------------ | ---------------------------------------------------- |
+| `--vlm-chip-radius`              | Border radius (pill-shaped)    | `999px`                                              |
+| `--vlm-chip-font-weight`         | Font weight                    | `500`                                                |
+| `--vlm-chip-transition-duration` | Transition duration            | `150ms`                                              |
+| `--vlm-chip-disabled-opacity`    | Opacity when disabled          | `0.5`                                                |
+| `--vlm-chip-remove-size`         | Remove button size             | `18px`                                               |
+| `--vlm-chip-remove-icon-size`    | Remove icon size               | `8px`                                                |
+| `--vlm-chip-remove-hover-bg`     | Remove button hover background | `color-mix(in oklch, currentColor 18%, transparent)` |
+
+### Theme Color Tokens
+
+For each theme (`primary`, `secondary`, `info`, `success`, `warning`):
+
+- `--vlm-chip-{theme}-bg` — Background color
+- `--vlm-chip-{theme}-bg-hover` — Background on hover
+- `--vlm-chip-{theme}-fg` — Text color
+
+### Size Tokens
+
+Each size (xs, sm, md, lg, xl, xxl) has tokens for padding, font size, and gap.
+
 ## All stories
 
 <Stories />

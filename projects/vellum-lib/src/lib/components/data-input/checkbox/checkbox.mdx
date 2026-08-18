@@ -1,4 +1,4 @@
-import {Canvas, Controls, Meta, Primary, Stories} from '@storybook/addon-docs/blocks';
+import { Canvas, Controls, Meta, Primary, Stories } from '@storybook/addon-docs/blocks';
 import * as CheckboxStories from './checkbox.stories';
 
 <Meta of={CheckboxStories} />
@@ -52,6 +52,44 @@ Error text is only shown once the field is both `touched` and has `errors` — m
 how a bound signal-forms field reports state.
 
 <Canvas of={CheckboxStories.Invalid} />
+
+## Theming
+
+All visual aspects are controlled by CSS custom properties.
+
+### Base Tokens
+
+| Token                                | Description                    | Default |
+| ------------------------------------ | ------------------------------ | ------- |
+| `--vlm-checkbox-radius`              | Border radius                  | `4px`   |
+| `--vlm-checkbox-font-weight`         | Label font weight              | `400`   |
+| `--vlm-checkbox-transition-duration` | Transition duration            | `150ms` |
+| `--vlm-checkbox-disabled-opacity`    | Opacity when disabled          | `0.5`   |
+| `--vlm-checkbox-focus-ring-width`    | Focus ring width               | `2px`   |
+| `--vlm-checkbox-gap`                 | Gap between checkbox and label | `8px`   |
+| `--vlm-checkbox-border-width`        | Border width                   | `1px`   |
+
+### Color Tokens
+
+| Token                                   | Description                 |
+| --------------------------------------- | --------------------------- |
+| `--vlm-checkbox-label-color`            | Label text color            |
+| `--vlm-checkbox-required-color`         | Required asterisk color     |
+| `--vlm-checkbox-error-text-color`       | Error message color         |
+| `--vlm-checkbox-error-font-size`        | Error message font size     |
+| `--vlm-checkbox-unchecked-border-color` | Border color when unchecked |
+| `--vlm-checkbox-unchecked-bg`           | Background when unchecked   |
+
+### Theme Tokens
+
+For each theme (`primary`, `secondary`, `error`):
+
+- `--vlm-checkbox-{theme}-color` — Checked background color
+- `--vlm-checkbox-{theme}-fg` — Checkmark color
+
+### Size Tokens
+
+Each size has tokens for box size and font size (xs, sm, md, lg, xl).
 
 ## All stories
 

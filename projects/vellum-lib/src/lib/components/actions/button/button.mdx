@@ -48,6 +48,56 @@ instead of visible text.
 
 <Canvas of={ButtonStories.Fab} />
 
+## Theming
+
+All visual aspects of the button are controlled by CSS custom properties. Override them to customize appearance.
+
+### Base Tokens
+
+| Token                              | Description                                | Default |
+| ---------------------------------- | ------------------------------------------ | ------- |
+| `--vlm-button-radius`              | Border radius for standard buttons         | `6px`   |
+| `--vlm-button-radius-fab`          | Border radius for FAB buttons              | `50%`   |
+| `--vlm-button-font-weight`         | Font weight                                | `600`   |
+| `--vlm-button-transition-duration` | Transition duration for hover/focus states | `150ms` |
+| `--vlm-button-disabled-opacity`    | Opacity when disabled                      | `0.5`   |
+
+### Size Tokens
+
+Each size has tokens for padding, font size, gap (icon spacing), and FAB diameter:
+
+**Extra Small (xs)**
+
+- `--vlm-button-size-xs-padding-block`: `4px`
+- `--vlm-button-size-xs-padding-inline`: `10px`
+- `--vlm-button-size-xs-font-size`: `12px`
+- `--vlm-button-size-xs-gap`: `4px`
+- `--vlm-button-size-xs-fab-diameter`: `28px`
+
+**Small (sm), Medium (md), Large (lg), Extra Large (xl), 2XL (xxl)** — Same pattern with increasing values.
+
+### Theme Color Tokens
+
+For each theme (`primary`, `secondary`, `info`, `success`, `warning`):
+
+| Token                                  | Description                                |
+| -------------------------------------- | ------------------------------------------ |
+| `--vlm-button-{theme}-bg`              | Background color (filled variant)          |
+| `--vlm-button-{theme}-bg-hover`        | Background color on hover (filled variant) |
+| `--vlm-button-{theme}-fg`              | Foreground/text color (filled variant)     |
+| `--vlm-button-{theme}-color`           | Border/text color (outlined/text variants) |
+| `--vlm-button-{theme}-bg-hover-subtle` | Background on hover (text variant)         |
+
+Example: Override primary button colors:
+
+```css
+:root {
+  --vlm-button-primary-bg: oklch(0.55 0.2 270);
+  --vlm-button-primary-bg-hover: oklch(0.5 0.2 270);
+  --vlm-button-primary-fg: oklch(1 0 0);
+}
+```
+
 ## All stories
 
 <Stories />

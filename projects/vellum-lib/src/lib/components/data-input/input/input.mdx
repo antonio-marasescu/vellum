@@ -1,4 +1,4 @@
-import {Canvas, Controls, Meta, Primary, Stories} from '@storybook/addon-docs/blocks';
+import { Canvas, Controls, Meta, Primary, Stories } from '@storybook/addon-docs/blocks';
 import * as InputStories from './input.stories';
 
 <Meta of={InputStories} />
@@ -48,6 +48,44 @@ Error text is only shown once the field is both `touched` and has `errors` —
 matching how a bound signal-forms field reports state.
 
 <Canvas of={InputStories.Invalid} />
+
+## Theming
+
+All visual aspects are controlled by CSS custom properties.
+
+### Base Tokens
+
+| Token                             | Description                 | Default |
+| --------------------------------- | --------------------------- | ------- |
+| `--vlm-input-radius`              | Border radius               | `6px`   |
+| `--vlm-input-font-weight`         | Font weight                 | `400`   |
+| `--vlm-input-transition-duration` | Transition duration         | `150ms` |
+| `--vlm-input-disabled-opacity`    | Opacity when disabled       | `0.5`   |
+| `--vlm-input-focus-ring-width`    | Focus ring width            | `2px`   |
+| `--vlm-input-gap`                 | Gap between label and input | `6px`   |
+
+### Color Tokens
+
+| Token                               | Description                       |
+| ----------------------------------- | --------------------------------- |
+| `--vlm-input-color`                 | Input text color                  |
+| `--vlm-input-placeholder-color`     | Placeholder text color            |
+| `--vlm-input-basic-bg`              | Background for basic variant      |
+| `--vlm-input-outlined-bg`           | Background for outlined variant   |
+| `--vlm-input-outlined-border-color` | Border color for outlined variant |
+| `--vlm-input-primary-color`         | Focus color (primary theme)       |
+| `--vlm-input-secondary-color`       | Focus color (secondary theme)     |
+| `--vlm-input-error-color`           | Border/focus color when invalid   |
+| `--vlm-input-label-color`           | Label text color                  |
+| `--vlm-input-label-font-size`       | Label font size                   |
+| `--vlm-input-label-font-weight`     | Label font weight                 |
+| `--vlm-input-required-color`        | Required asterisk color           |
+| `--vlm-input-error-text-color`      | Error message color               |
+| `--vlm-input-error-font-size`       | Error message font size           |
+
+### Size Tokens
+
+Each size (xs, sm, md, lg, xl) has tokens for padding and font size.
 
 ## All stories
 

@@ -1,0 +1,118 @@
+import { Meta } from '@storybook/addon-docs/blocks';
+
+<Meta title="Getting Started" />
+
+# Getting Started
+
+This guide walks you through installing Vellum and using it in your Angular application.
+
+## Installation
+
+Install Vellum from npm:
+
+```bash
+npm install vellum-lib
+# or
+pnpm add vellum-lib
+# or
+yarn add vellum-lib
+```
+
+## Requirements
+
+- **Angular**: 22.1.1 or higher
+- **Node.js**: 20+ recommended
+
+Vellum peer dependencies:
+
+- `@angular/common`
+- `@angular/core`
+- `@angular/cdk`
+- `@angular/forms`
+- `@angular/platform-browser`
+
+These are typically already in your Angular project.
+
+## Basic Setup
+
+### 1. Import the CSS
+
+Add Vellum's compiled styles to your application's global styles:
+
+```css
+/* In your global styles.css or styles.scss */
+@import 'vellum-lib/styles/index.css';
+```
+
+That's it for styling — no Tailwind config, no build toolchain, no additional setup.
+
+### 2. Import Components
+
+All Vellum components are standalone. Import them directly into your components:
+
+```typescript
+import { Component } from '@angular/core';
+import { VlmButtonComponent } from 'vellum-lib';
+
+@Component({
+  selector: 'app-root',
+  standalone: true,
+  imports: [VlmButtonComponent],
+  template: ` <vlm-button>Click me</vlm-button> `
+})
+export class AppComponent {}
+```
+
+### 3. Configure Theming (Optional)
+
+Vellum ships with light (default) and dark themes. Control the active theme via a `data-theme` attribute on any ancestor element:
+
+```html
+<html data-theme="dark">
+  <!-- All Vellum components inside will use the dark theme -->
+</html>
+```
+
+Or toggle it programmatically:
+
+```typescript
+export class AppComponent {
+  toggleTheme() {
+    const current = document.documentElement.getAttribute('data-theme');
+    document.documentElement.setAttribute('data-theme', current === 'dark' ? 'light' : 'dark');
+  }
+}
+```
+
+See [Theming & Dark Mode](/?path=/docs/theming--docs) for more details.
+
+## Usage Example
+
+Here's a complete example showing multiple components:
+
+```typescript
+import { Component } from '@angular/core';
+import { VlmButtonComponent, VlmInputComponent, VlmCheckboxComponent } from 'vellum-lib';
+
+@Component({
+  selector: 'app-form',
+  standalone: true,
+  imports: [VlmButtonComponent, VlmInputComponent, VlmCheckboxComponent],
+  template: `
+    <form>
+      <vlm-input label="Email" type="email" placeholder="you@example.com" />
+
+      <vlm-checkbox label="Subscribe to newsletter" />
+
+      <vlm-button variant="primary" type="submit"> Sign Up </vlm-button>
+    </form>
+  `
+})
+export class AppFormComponent {}
+```
+
+## Next Steps
+
+- Browse the component catalog in the sidebar
+- Read about [Theming & Dark Mode](/?path=/docs/theming--docs)
+- Check individual component docs for usage patterns and customization options

@@ -1,4 +1,4 @@
-import {Canvas, Controls, Meta, Primary, Stories} from '@storybook/addon-docs/blocks';
+import { Canvas, Controls, Meta, Primary, Stories } from '@storybook/addon-docs/blocks';
 import * as RadioGroupStories from './radio-group.stories';
 
 <Meta of={RadioGroupStories} />
@@ -44,6 +44,16 @@ Error text is only shown once the field is both `touched` and has `errors` — m
 how a bound signal-forms field reports state.
 
 <Canvas of={RadioGroupStories.Invalid} />
+
+## Theming
+
+Group-level tokens control layout and error styling. Individual radio buttons inherit their tokens from the radio component.
+
+| Token                                | Description               | Default                                |
+| ------------------------------------ | ------------------------- | -------------------------------------- |
+| `--vlm-radio-group-gap`              | Gap between radio buttons | `8px`                                  |
+| `--vlm-radio-group-error-font-size`  | Error message font size   | `12px`                                 |
+| `--vlm-radio-group-error-text-color` | Error message color       | Inherits from `--vlm-color-error-text` |
 
 ## All stories
 
