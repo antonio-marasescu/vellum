@@ -1,6 +1,13 @@
-# Vellum
+<p align="center">
+  <img src="./logo.svg" alt="ng-vellum" width="400"/>
+</p>
 
-A personal Angular component library with accessible and customizable UI signal-first components for Angular.
+<p align="center">
+  <strong>A personal Angular component library.</strong><br>
+  Accessible and customizable UI signal-first components for Angular.
+</p>
+
+---
 
 ## Project Structure
 
